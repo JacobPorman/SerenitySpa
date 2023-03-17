@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Spa</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -9,14 +9,19 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Bootstrap CSS -->
+    <!-- Style CSS -->
+
+    <!-- Fontawesome CSS -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
+      href="./fontawesome-free-6.2.0-web/css/all.min.css"
     />
-    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/gioi-thieu.css" />
   </head>
   <body>
     <header class="position-fixed-top">
@@ -68,7 +73,7 @@
     <main>
       <div class="header-main">
         <div class="left-head">
-          <img src="./image/logo/logo(500x300).png" alt="" />
+          <img class="logo" src="./image/logo/logo(500x300).png" alt="" />
           <h1>TỪ ĐIỂM BẮT ĐẦU TỚI ĐÍCH ĐẾN LÀ LÀN DA KHỎE MẠNH!</h1>
           <p>
             IMAGE Skincare là một thương hiệu dược mỹ phẩm được tạo ra – ngay từ
@@ -85,6 +90,73 @@
         <div class="right-head">
           <img src="./image/gioi-thieu/mau-nu-2-420x500.png" alt="" />
         </div>
+      </div>
+      <div class="mid-main">
+        <div class="top-mid-main">
+          <div class="left-mid">
+            <img src="./image/gioi-thieu/mau-nu-768x1157.png" alt="" />
+          </div>
+          <div class="right-mid">
+            <p>
+              Chúng tôi hiểu rõ hơn bất kì ai rằng: làn da của bạn luôn thay đổi
+              và luôn thích ứng với cuộc sống muôn màu-muôn vẻ. Vậy nên chúng
+              tôi chọn dùng các thành phần hoạt tính, thực vật thông minh và
+              công nghệ tân tiến nhất để tạo ra các liệu trình điều trị hiệu quả
+              cho tất cả loại da, tình trạng và vấn đề. Nâng tầm và đem đến các
+              công thức dược mỹ phẩm an toàn, không chỉ giới hạn trong các nhu
+              cầu cơ bản. Đem đến cho bạn một trải nghiệm chăm sóc da dành cho
+              bạn, hiểu bạn – và đồng hành với bạn qua từng thay đổi, dù là nhỏ
+              nhất trong cuộc sống.
+            </p>
+            <div class="list-radiusimg">
+              <div>
+                <img src="./image/gioi-thieu/icon-tron-1-150x150.png" alt="" />
+              </div>
+              <div>
+                <img src="./image/gioi-thieu/icon-tron-2-150x150.png" alt="" />
+              </div>
+              <div>
+                <img src="./image/gioi-thieu/icon-tron-3-150x150.png" alt="" />
+              </div>
+              <div>
+                <img src="./image/gioi-thieu/icon-tron-4-150x150.png" alt="" />
+              </div>
+            </div>
+            <p>
+              Tổn thương da do nắng, mụn, lão hóa, nám – bất kì vấn đề nào với
+              làn da của bạn, giải pháp của chúng tôi được chúng minh đạt được
+              hiệu quả. Có lý do vì sao chúng tôi được các chuyên viên ngành
+              dược mỹ phẩm chọn lựa, và tin tưởng vào các giải pháp chúng tôi
+              mang lại sẽ phù hợp cho từng bước, từng giai đoạn chăm sóc da của
+              bạn. Hãy khám phá IMAGE Skincare của riêng bạn – bắt đầu hành
+              trình chào đón làn da rạng ngời nhất, khỏe nhất của mình.
+            </p>
+          </div>
+        </div>
+        <div class="bottom-mid-main">
+          <h1>SERENITY TẠI VIỆT NAM!</h1>
+          <p>
+            Công ty Image Skincare Việt Nam là nhà phân phối mỹ phẩm Image
+            Skincare chính hãng hàng đầu hiện nay. Không chỉ cam kết cung cấp
+            sản phẩm chất lượng mà còn nhiều chính sách ưu đãi dành cho khách
+            hàng:
+          </p>
+          <ul>
+            <li>Giao hàng toàn quốc. Nội thành giao trong ngày.</li>
+            <li>Miễn phí giao hàng cho đơn hàng 500K.</li>
+            <li>Cam kết sản phẩm chính hãng 100%</li>
+            <li>
+              Đổi trả trong vòng 7 ngày - Nếu sản phẩm lỗi hoặc kích ứng khi sử
+              dụng.
+            </li>
+            <li>
+              Chuyên viên da liễu tư vấn chăm sóc da và sử dụng sản phẩm 24/24.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="img-main">
+        <img src="./image/gioi-thieu/ghmxfj3523ttir.png" alt="" />
       </div>
     </main>
     <footer>
@@ -151,20 +223,11 @@
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="./libs/bootstrap/bootstrap-jQ.min.js"></script>
+    <script src="./libs/bootstrap/popper.min.js"></script>
+    <script src="./libs/bootstrap/bootstrap.min.js"></script>
+
+    <script src="./js/main.js"></script>
+    <script type="module" src="./js/module.js"></script>
   </body>
 </html>

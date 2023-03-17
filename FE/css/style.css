@@ -8,6 +8,8 @@
 } */
 
 
+/* HEADER */
+
 .logo img{
     width: 200px;
     height: auto;
@@ -88,29 +90,8 @@
     font-size: 10px;
 }
 
-/* Giới thiệu */
 
-.header-main {
-    font-size: 62.5%;   
-    display: flex;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
 
-.left-head {
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 200%;
-}
-
-.left-head p {
-
-}
-
-.left-head h1 {
-
-}
 
 
 /* Footer */

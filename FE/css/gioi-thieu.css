@@ -1,0 +1,96 @@
+/* Giới thiệu */
+
+.header-main {
+    font-size: 60%;   
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 4.5rem;
+}
+
+.left-head {
+    text-align: center;
+    padding: 0 153px;
+    font-size: 200%;
+}
+
+.left-head .logo {
+    width: 250px;
+    margin: 0 0 35px;
+}
+
+.left-head h1 {
+    font-size: 170%;
+    padding-bottom: 1.5rem;
+}
+
+.left-head p {
+    text-align: left;
+    font-size: 80%;
+    color: #777777;
+}
+
+
+.mid-main {
+    background-color: rgb(228, 224, 224);
+}
+
+.top-mid-main {
+    display: flex;
+}
+
+.left-mid img {
+    width: 600px;
+    height: auto;
+    padding: 35px 15px 0px;
+}
+
+.right-mid {
+    padding: 138px;
+}
+
+.right-mid p {
+    color: #777777;
+}
+
+
+.list-radiusimg {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+
+}
+
+.list-radiusimg img {
+    border-radius: 2px white solid ;
+    width: 180px;
+    height: auto;
+    padding: 0 15px;
+}
+
+.right-mid p {
+    padding: 15px;
+}
+
+.bottom-mid-main {
+    margin: auto;
+    width: 1125px;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+
+.bottom-mid-main h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 650;
+    margin: 0 0 20px;
+}
+
+.bottom-mid-main p,ul {
+    text-align: left;
+    color:#777777;
+}
+
+.bottom-mid-main ul li{
+    margin: 0 0 10px;
+}
