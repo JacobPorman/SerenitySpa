@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* html{
+    font-size: 62.5%;
+} */
+
+
+.logo img{
+    width: 200px;
+    height: auto;
+}
+
+.container-fluid .icon{
+    position: absolute;
+    top: 30px;
+    right: 250px;
+}
+/* 
+.container-fluid .icon i{
+    padding-right: 20px;
+} */
+
+/* Search Btn */
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 50px;
+    padding: 10px;
+}
+
+.search_input{
+    border: 0;
+    border-bottom: 1px solid #abaaaabe;
+    outline: 0;
+    width: 0;
+    caret-color: transparent;
+    line-height: 30px;
+    letter-spacing: 1.5;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover .search_input{
+    padding: 0 10px;
+    width: 250px;
+    caret-color:#333;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover .search_icon{
+    background: white;
+    color: #e74c3c;
+}
+
+.search_icon{
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 50%; */
+    color:#333;
+    text-decoration:none;
+}
+
+.searchbar button{
+    border: none;
+}
+
+
+
+.navbar a {
+    color:#333;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.navbar a:hover{
+    color: rgb(222, 64, 64);
+}
+
+
+.navbar .fa-chevron-down{
+    font-size: 10px;
+}
+
+/* Giới thiệu */
+
+.header-main {
+    font-size: 62.5%;   
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.left-head {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 200%;
+}
+
+.left-head p {
+
+}
+
+.left-head h1 {
+
+}
+
+
+/* Footer */
+
+.cover-footer{
+    width: 100%;
+    border-top: 1px solid #000000;
+}
+
+.content-footer{
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 50px;
+    /* background-color: rgb(213, 147, 66); */
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.col-footer{
+    flex: 25%;
+    padding:20px 20px;
+}
+
+.col-footer p{
+    color: #786f69;
+}
+
+.col-footer .title{
+    font-weight: 700;
+    color: #424242;
+}
+
+.icon-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.icon-footer a{
+    color: #424242;
+    padding: 0 10px;
+}
+
+.icon-footer i{
+    font-size: 26px;
+}
+
+
+.content-footer img{
+    width: 300px;
+}
+
+.col-footer a.link{
+    text-decoration: none;
+    color: #786f69;
+}
+
+
+
+
+
+
+
+
+/* MEDIA */
+
+@media only screen and (max-width: 768px) {
+    .content-footer{
+        display: block;
+    }
+}
