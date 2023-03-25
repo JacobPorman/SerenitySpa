@@ -146,3 +146,27 @@
     font-weight: 650;
     color: #777777;
 }
+
+.finally {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.img-finally {
+    width: 699px;
+    height: 1157px;
+}
+
+.content-finally {
+    padding-top: 200px;
+    margin-left: 20px;
+}
+
+.content-finally h1 {
+    margin: 0 0 20px;
+}
+
+.content-finally p {
+    text-align: center;
+    margin: 0 0 20px;
+}
