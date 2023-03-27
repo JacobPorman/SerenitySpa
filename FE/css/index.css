@@ -1,0 +1,10 @@
+/* Best Product */
+.bestProduct {
+  padding-top: 40px;
+}
+
+.bestProduct h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+}

@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 /* html{
     font-size: 62.5%;
 } */
@@ -49,10 +53,12 @@
   top: 30px;
   right: 250px;
 }
-/* 
-.container-fluid .icon i{
-    padding-right: 20px;
-} */
+
+.item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Search Btn */
 .searchbar {
@@ -109,6 +115,7 @@
   background: #fff;
 
   font-size: 20px;
+
   border: none;
   border-radius: 50%;
   color: #333;
@@ -116,9 +123,18 @@
   transition: 0.2s;
 }
 
+.shopping-cart {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 50px;
+  padding: 10px;
+}
+
 .shopping-cart:hover .shopping_icon {
   color: #e74c3c;
 }
+
+/* Nav bar */
 
 .navbar a {
   color: #333;
