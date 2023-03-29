@@ -84,6 +84,7 @@
 .carousel-product .carousel-indicators {
   bottom: -300px;
 }
+
 .carousel-indicators li,
 .carousel-indicators li.active {
   width: 10px;
@@ -93,6 +94,7 @@
   border-color: transparent;
   border: none;
 }
+
 .carousel-product .carousel-indicators li {
   background: rgba(0, 0, 0, 0.2);
 }
