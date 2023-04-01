@@ -1,0 +1,46 @@
+.container .content {
+    display: flex;
+}
+
+.content-address {
+    margin: 30px 25px;
+}
+
+.content-address h3 {
+    color: #D9B23D;
+    margin: 0 0 20px;
+}
+
+.content .content-address p {
+    margin: 15px 0 10px;
+}
+
+.content-address .phone b {
+    margin: 15px 0 10px;
+}
+
+.form-information {
+    margin: 30px 25px;
+}
+
+.form-information h3 {
+    color: #D9B23D;
+    margin: 0 0 20px;
+}
+
+.form-information .form {
+    display: flex;
+}
+
+.form-information input {
+    background: #e4e2e3;
+}
+
+.form-information .box {
+    margin: 20px 0 0;
+    padding: 5px 12px;
+    width: 578px;
+    height: 200px;
+    border: 1px solid #ccc;
+    background: #e4e2e3;
+}
