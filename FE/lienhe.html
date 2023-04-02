@@ -107,22 +107,22 @@
           <div class="form-information">
             <h3>NHẬN THÔNG TIN</h3>
             <div class="form">
-              <div class="name">
-                <b>Nhập họ Tên:</b>
-                <input type="text">
+              <div class="input-text">
+                <label for="name">Nhập họ Tên:</label>
+                <input type="text" value="" id="name_tv" required>
               </div>
-              <div class="email">
-                <b>Nhập email:</b>
-                <input type="text">
+              <div class="input-text">
+                <label for="email">Nhập Email:</label>
+                <input type="text" value="" id="email" required>
               </div>
-              <div class="phone">
-                <b>Nhập SĐT:</b>
-                <input type="text">
+              <div class="input-text">
+                <label for="phone">Nhập SĐT:</label>
+                <input type="text" value="" id="phone" required> 
               </div>
             </div>
-            <div class="box">
-              <input type="text">
-            </div>
+            <textarea name="note" id="note" required></textarea>
+            <input type="button" value="Hủy" id="clear">
+            <input type="submit" id="submitLienhe" value="Gửi">
           </div>
         </div>
       </div>
