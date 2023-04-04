@@ -51,6 +51,7 @@
 
 .right-mid p {
     color: #777777;
+    padding: 15px;
 }
 
 
@@ -66,10 +67,6 @@
     width: 180px;
     height: auto;
     padding: 0 15px;
-}
-
-.right-mid p {
-    padding: 15px;
 }
 
 .bottom-mid-main {

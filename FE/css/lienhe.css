@@ -59,3 +59,31 @@ input[type='submit'] {
     border: 1px solid #ccc;
 }
 
+.support {
+    display: flex;
+    text-align: center;
+}
+
+.support .support-services {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}   
+
+.support-services h3 {
+    color: #D9B23D;
+    margin: 10px 0 0;
+}
+
+.support-services p {
+    margin-top: 15px;
+} 
+
+.counsel {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cashier {
+
+}
