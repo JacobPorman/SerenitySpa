@@ -1,6 +1,6 @@
 /* Best Product */
 .bestProduct {
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 .bestProduct h1 {
@@ -121,4 +121,42 @@
   color: rgb(241, 239, 239);
   padding: 5px 15px;
   background: rgb(0, 0, 0);
+}
+
+.carousel-inner .btn-seeProductAll {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.btn-seeProductAll input {
+  background-color: #000;
+  color: whitesmoke;
+  padding: 5px 10px;
+}
+
+/* COLLECTION */
+
+.collection .item-img img {
+  width: 250px;
+}
+
+.collection .item-collect {
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  margin-top: 50px;
+}
+
+.item-collect .item-img {
+  padding: 0 10px;
+}
+
+.item-img .item-text {
+  width: 250px;
+  left: 10px;
+  padding: 20px 20px;
+}
+
+.item-img:hover .item-text {
+  background: rgba(64, 60, 60, 0.2);
 }
