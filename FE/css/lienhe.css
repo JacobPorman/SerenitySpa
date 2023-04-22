@@ -1,3 +1,18 @@
+* {
+    padding:  0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+main {
+    width: 100%;
+    height: auto;
+}
+
 .container .content {
     display: flex;
 }
@@ -64,13 +79,15 @@ input[type='submit'] {
     float: left;
     background-color: #fff6e5;
     margin: 0 0 60px;
-    padding: 0 0 20px;
+    padding: 0 0 20px;  
 }
 
 .support .support-services {
     font-size: 14px;
     font-weight: 600;
     text-align: left;
+    width: 50%;
+    margin: 25px 0 25px 30px;
 }   
 
 .support-services h3 {
@@ -84,12 +101,13 @@ input[type='submit'] {
 } 
 
 .counsel {
-    display: flex;
     justify-content: space-around;
+    width: 50%;
 }
 
 .cashier {
     justify-content: space-around;
+    display: flex;
 }
 
 .cashier img {
@@ -97,8 +115,4 @@ input[type='submit'] {
     height: 140px;
     margin: 45px 27px 10px ;
     border-radius: 2px solid white;
-}
-
-.cashier span { 
-
 }

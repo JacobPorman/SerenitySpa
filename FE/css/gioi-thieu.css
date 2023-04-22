@@ -1,3 +1,18 @@
+* {
+    padding:  0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+main {
+    width: 100%;
+    height: auto;
+}
+
 /* Giới thiệu */
 
 .header-main {
@@ -6,12 +21,25 @@
     margin-top: 15px;
     margin-bottom: 15px;
     padding-bottom: 4.5rem;
+    margin-top: 50px;
+    padding-top: 50px;
 }
 
 .left-head {
     text-align: center;
     padding: 0 153px;
     font-size: 200%;
+    width: 65%;
+}
+
+.right-head {
+    width: 35%;
+    text-align: center;
+}
+
+.right-head img {
+    width: 420;
+    height: 500;
 }
 
 .left-head .logo {
@@ -22,6 +50,7 @@
 .left-head h1 {
     font-size: 170%;
     padding-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 .left-head p {
@@ -39,14 +68,20 @@
     display: flex;
 }
 
+.left-mid {
+    width: 45%;
+}
+
 .left-mid img {
+    max-width: 100%;
     width: 600px;
     height: auto;
     padding: 35px 15px 0px;
 }
 
 .right-mid {
-    padding: 138px 0;
+    padding: 139px 139px;
+    width: 55%;
 }
 
 .right-mid p {
@@ -119,8 +154,6 @@
     width: 450px;
     height: auto;
 }
-
-
 
 .last h6 {
     color:#777777;
