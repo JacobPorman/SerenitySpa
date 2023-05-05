@@ -143,7 +143,7 @@
 .collection .item-collect {
   display: flex;
   overflow: hidden;
-  overflow-x: auto;
+  overflow-x: scroll;
   margin-top: 50px;
 }
 
@@ -159,4 +159,17 @@
 
 .item-img:hover .item-text {
   background: rgba(64, 60, 60, 0.2);
+}
+
+/* FOLLOW US */
+
+.image-flwus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image-flwus img {
+  width: 250px;
+  padding-top: 50px;
 }

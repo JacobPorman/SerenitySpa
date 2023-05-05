@@ -1,0 +1,17 @@
+/* Cate - Side */
+
+.cate-side {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.cate-side .title {
+  font-size: 20px;
+}
+
+/* Product - Side */
+
+.product-side ol,
+li {
+  list-style: none;
+}
