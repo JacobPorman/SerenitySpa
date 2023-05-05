@@ -36,6 +36,7 @@ main {
 
 .form-information {
     margin: 30px 25px;
+    box-sizing: border-box;
 }
 
 .form-information h3 {
@@ -53,10 +54,14 @@ main {
     height: 40px;
 }
 
+.form-information .input-text{
+    width: 200px;
+}
+
 .form-information textarea {
     margin: 20px 0 0;
     background: #e4e2e3;
-    width: 578px;
+    width: 597px;
     height: 200px;
     padding: 5px 12px;
     border: 1px solid #ccc;
@@ -76,10 +81,9 @@ input[type='submit'] {
 
 .support {
     display: flex;
-    float: left;
     background-color: #fff6e5;
     margin: 0 0 60px;
-    padding: 0 0 20px;  
+    padding: 0 20px 20px 20px;  
 }
 
 .support .support-services {
@@ -87,32 +91,39 @@ input[type='submit'] {
     font-weight: 600;
     text-align: left;
     width: 50%;
-    margin: 25px 0 25px 30px;
+    margin: 25px 50px 25px 30px;
 }   
 
 .support-services h3 {
     color: #D9B23D;
     margin: 10px 0 0;
+    font-weight: 600;
+    font-size: 22px;
 }
 
 .support-services p {
     margin: 15px 0 10px;
     line-height: 1.8;
+    text-align: justify;
+    font-size: 14px;
 } 
 
 .counsel {
-    justify-content: space-around;
     width: 50%;
 }
 
 .cashier {
-    justify-content: space-around;
     display: flex;
 }
 
-.cashier img {
-    width: 140px;
-    height: 140px;
+.cashier div {
+    text-align: center;
+}
+
+.cashier div img {
+    width: 120px;
+    height: 120px;
     margin: 45px 27px 10px ;
-    border-radius: 2px solid white;
+    border: 10px #efedee solid;
+    border-radius: 100px;
 }

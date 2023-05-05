@@ -98,16 +98,11 @@ main {
     justify-content: center;
 }
 
-.list-radiusimg div {
-    text-align: center;
-}
-
 .list-radiusimg img {
     border-radius: 2px white solid ;
     padding: 0 15px;
     max-height: 100%;
     max-width: 100%;
-    
 }
 
 .bottom-mid-main {
@@ -141,7 +136,7 @@ main {
 
 .bot-main .content-left {
     padding: 0 153.587px;
-
+    width: 70%;
 } 
 
 .content-left h1,p {
@@ -154,9 +149,14 @@ main {
 
 .bot-main p {
     color: #777777;
+    text-align: justify;
 }
 
-.bot-main img {
+.img-right {
+    width: 30%;
+}
+
+.img-right img {
     width: 450px;
     height: auto;
 }
