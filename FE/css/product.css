@@ -1,3 +1,8 @@
+.product-page {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 /* Cate - Side */
 
 .cate-side {
@@ -35,4 +40,80 @@ li {
 
 .breadcumb-item a:hover {
   color: rgb(95, 29, 29);
+}
+
+/* Cate-List */
+
+.cate-list {
+  margin-top: 20px;
+}
+
+.cate-list a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  /* transition: all 0.15s; */
+}
+
+.cate-list .item {
+  display: block;
+  padding: 8px 0;
+  margin: 0 20px 0 0;
+}
+
+.item .text-2 {
+  float: right;
+  text-align: center;
+  width: 40px;
+  border-radius: 15px;
+  transition: all ease-in 0.15s;
+}
+
+.item:hover .text-2 {
+  background-color: red;
+}
+
+.item:hover .text-1 {
+  color: black;
+}
+
+/* Product List */
+
+.product-list {
+  margin-top: 20px;
+}
+
+.product-item {
+  display: inline-block;
+  width: 270px;
+  cursor: pointer;
+  padding: 0 15px 20px 15px;
+}
+
+.product-item img {
+  width: 100%;
+  transition: all 0.25s;
+}
+
+.product-item .bl-1 {
+  width: 100%;
+  background-color: #7f7f7f;
+  color: white;
+  text-align: center;
+  padding: 4px 10px;
+  transition: all 0.25s;
+}
+
+.product-item:hover .bl-1 {
+  transform: translateY(-10px);
+}
+
+.product-item:hover img {
+  transform: scale(1.2);
+}
+
+.product-item .text-3 {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
 }
