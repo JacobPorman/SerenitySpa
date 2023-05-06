@@ -127,3 +127,61 @@ input[type='submit'] {
     border: 10px #efedee solid;
     border-radius: 100px;
 }
+
+/* MEDIA RESPONSIVE */
+
+@media only screen and (max-width: 768px) {
+   .container .content {
+        display: block;
+    }
+
+   .container .support {
+        display: block;
+        padding: 20px;
+    }
+
+   .support .support-services{
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+   .support .support-services p{
+        text-align: center;
+    }
+
+   .counsel {
+        width: 100%;
+    }
+
+   .counsel .cashier{
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .container .support {
+        display: block;
+        padding: 20px;
+    }
+
+   .support .support-services{
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+   .support .support-services p{
+        text-align: center;
+        padding: 0 25px;
+    }
+
+   .counsel {
+        width: 100%;
+    }
+
+   .counsel .cashier{
+        padding: 0 150px;
+        justify-content: center;
+    }
+}
