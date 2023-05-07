@@ -1,20 +1,34 @@
+<?php
+require_once "./mvc/core/basehref.php";
+if (!$_SESSION['username']) {
+    header("Location: " . geturl() . "/login/loginView");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/admin.css">
-    <link rel="stylesheet" href="./libs/fontawesome-free-6.2.0-web/css/all.min.css">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+
+    <style>
+        <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
+        include "./assets/libs/bootstrap/bootstrap.min.css";
+        include "./assets/css/admin.css";
+        ?>
+    </style>
 </head>
+
 <body>
     <section class="admin">
         <div class="navbar">
             <div class="navbar-logo">
-                <img src="./image/logo/logo(500x300).png" alt="">
+                <img src="./image/logo/logo(500x300).png" alt="" />
             </div>
 
             <div class="navbar-menu">
@@ -22,7 +36,7 @@
                     <li class="nav-item nav-profile">
                         <div class="nav-profile">
                             <div class="nav-profile-img">
-                                <img src="../FE/image/logo/admin.png" alt="">
+                                <img src="../FE/image/logo/admin.png" alt="" />
                             </div>
                             <div class="nav-profile-text">
                                 <p>Nguyen Q Toan</p>
@@ -39,7 +53,7 @@
                         <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     </li>
                 </ul>
-            </div>  
+            </div>
         </div>
 
         <div class="main">
@@ -48,25 +62,19 @@
                     <li class="nav-item active" data-target="products">
                         <a href="" class="nav-link">
                             <i class="fa-regular fa-clipboard"></i>
-                            <span class="nav-title">
-                                Products
-                            </span>
+                            <span class="nav-title"> Products </span>
                         </a>
                     </li>
                     <li class="nav-item" data-target="customers">
                         <a href="" class="nav-link">
                             <i class="fa-regular fa-user"></i>
-                            <span class="nav-title">
-                                Customers
-                            </span>
+                            <span class="nav-title"> Customers </span>
                         </a>
                     </li>
                     <li class="nav-item" data-target="orders">
                         <a href="" class="nav-link">
                             <i class="fa-regular fa-credit-card"></i>
-                            <span class="nav-title">
-                                Orders
-                            </span>
+                            <span class="nav-title"> Orders </span>
                         </a>
                     </li>
                 </ul>
@@ -90,7 +98,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><img src="./img/tshirts/3.1.jpg" alt=""></td>
+                                    <td><img src="./img/tshirts/3.1.jpg" alt="" /></td>
                                     <td id="name-product">POPULAR</td>
                                     <td id="price-product">310.000</td>
                                     <td>
@@ -106,11 +114,11 @@
                                 </tr>
 
                                 <tr>
-                                    <td><img src="./img/tshirts/3.1.jpg" alt=""></td>
+                                    <td><img src="./img/tshirts/3.1.jpg" alt="" /></td>
                                     <td id="name">POPULAR</td>
                                     <td id="price">310.000</td>
                                     <td>
-                                        <button id="remove" >
+                                        <button id="remove">
                                             <i class="fa-sharp fa-solid fa-circle-xmark"></i>
                                         </button>
                                     </td>
@@ -124,7 +132,7 @@
                         </table>
                     </div>
 
-                    <div class="customers" style="display: none;" id="customers">
+                    <div class="customers" style="display: none" id="customers">
                         <div class="container-fluid">
                             <h2>Danh sách khách hàng</h2>
                         </div>
@@ -140,7 +148,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><img src="./img/tshirts/3.1.jpg" alt=""></td>
+                                    <td><img src="./img/tshirts/3.1.jpg" alt="" /></td>
                                     <td id="name-customer">Nguyễn Quốc Toàn</td>
                                     <td id="gmail">ngquoctoan2001@gmail.com</td>
                                     <td>
@@ -156,11 +164,11 @@
                                 </tr>
 
                                 <tr>
-                                    <td><img src="./img/tshirts/3.1.jpg" alt=""></td>
+                                    <td><img src="./img/tshirts/3.1.jpg" alt="" /></td>
                                     <td id="name-customer">Toàn Quốc Nguyễn</td>
                                     <td id="gmail">asdasdasd@gmail.com</td>
                                     <td>
-                                        <button id="remove" >
+                                        <button id="remove">
                                             <i class="fa-sharp fa-solid fa-circle-xmark"></i>
                                         </button>
                                     </td>
@@ -174,72 +182,72 @@
                         </table>
                     </div>
 
-                    <div class="orders" id="orders" style="display: none;">
+                    <div class="orders" id="orders" style="display: none">
                         <div class="container-fluid">
                             <h2>Danh sách đơn hàng</h2>
                         </div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <td>STT</td>
-                                        <td>Mã hóa đơn</td>
-                                        <td>Khách hàng</td>
-                                        <td>Tổng tiền</td>
-                                        <td>Trạng thái</td>
-                                        <td></td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>#HD001</td>
-                                        <td>Nguyễn Văn A</td>
-                                        <td>1.500.000 VNĐ</td>
-                                        <td>Đang xử lý</td>
-                                        <td><a href="#">Xem chi tiết</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>#HD002</td>
-                                        <td>Trần Thị B</td>
-                                        <td>2.000.000 VNĐ</td>
-                                        <td>Hoàn thành</td>
-                                        <td><a href="#">Xem chi tiết</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>#HD003</td>
-                                        <td>Phạm Văn C</td>
-                                        <td>1.800.000 VNĐ</td>
-                                        <td>Đã hủy</td>
-                                        <td><a href="#">Xem chi tiết</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>STT</td>
+                                    <td>Mã hóa đơn</td>
+                                    <td>Khách hàng</td>
+                                    <td>Tổng tiền</td>
+                                    <td>Trạng thái</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>#HD001</td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>1.500.000 VNĐ</td>
+                                    <td>Đang xử lý</td>
+                                    <td><a href="#">Xem chi tiết</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>#HD002</td>
+                                    <td>Trần Thị B</td>
+                                    <td>2.000.000 VNĐ</td>
+                                    <td>Hoàn thành</td>
+                                    <td><a href="#">Xem chi tiết</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>#HD003</td>
+                                    <td>Phạm Văn C</td>
+                                    <td>1.800.000 VNĐ</td>
+                                    <td>Đã hủy</td>
+                                    <td><a href="#">Xem chi tiết</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <div class="modal">
                         <div class="modal-content">
-                        <h2>Chỉnh sửa sản phẩm</h2>
-                        <form>
-                            <div>
-                                <label for="product-name">Tên sản phẩm:</label>
-                                <input type="text" id="product-name" name="product-name" required>
-                            </div>
-                            <div>
-                                <label for="product-price">Giá:</label>
-                                <input type="text" id="product-price" name="product-price" required>
-                            </div>
+                            <h2>Chỉnh sửa sản phẩm</h2>
+                            <form>
+                                <div>
+                                    <label for="product-name">Tên sản phẩm:</label>
+                                    <input type="text" id="product-name" name="product-name" required />
+                                </div>
+                                <div>
+                                    <label for="product-price">Giá:</label>
+                                    <input type="text" id="product-price" name="product-price" required />
+                                </div>
 
-                            <div>
-                                <label for="product-images">Hình ảnh:</label>
-                                <input type="file" id="product-images" name="product-images" accept="image/*" multiple>
-                            </div>
-                    
-                            <div class="button">
-                                <button type="submit">Cập nhật</button>
-                            </div>
-                        </form>
+                                <div>
+                                    <label for="product-images">Hình ảnh:</label>
+                                    <input type="file" id="product-images" name="product-images" accept="image/*" multiple />
+                                </div>
+
+                                <div class="button">
+                                    <button type="submit">Cập nhật</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -247,6 +255,20 @@
         </div>
     </section>
 
-    <script src="./js/admin.js"></script>
+
+    <script>
+        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+        include "./assets/libs/bootstrap/popper.min.js";
+        include "./assets/libs/bootstrap/bootstrap.min.js";
+
+
+        include "./assets/js/admin.js";
+
+
+
+
+        ?>
+    </script>
 </body>
+
 </html>
