@@ -19,12 +19,13 @@ if (!$_SESSION['username']) {
     <!-- Style CSS -->
 
 
+    <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
+
     <style>
-    <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
-    include "./assets/libs/bootstrap/bootstrap.min.css";
-    include "./assets/css/style.css";
-    include "./assets/css/lienhe.css";
-    ?>
+        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+        include "./assets/css/style.css";
+        include "./assets/css/lienhe.css";
+        ?>
     </style>
 </head>
 
@@ -81,10 +82,7 @@ if (!$_SESSION['username']) {
     <main>
         <div class="container">
             <div class="map" id="map" style="width:100%;height:500px;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.105804878304!2d106.71803137490824!3d10.803207889347203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a6df63ab19%3A0x777eface27865ce8!2zMTY4IE5ndXnhu4VuIFbEg24gVGjGsMahbmcsIFBoxrDhu51uZyAyNSwgQsOsbmggVGjhuqFuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oIDcwMDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1680249276952!5m2!1svi!2s"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.105804878304!2d106.71803137490824!3d10.803207889347203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a6df63ab19%3A0x777eface27865ce8!2zMTY4IE5ndXnhu4VuIFbEg24gVGjGsMahbmcsIFBoxrDhu51uZyAyNSwgQsOsbmggVGjhuqFuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oIDcwMDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1680249276952!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="content">
                 <div class="content-address">
@@ -175,8 +173,7 @@ if (!$_SESSION['username']) {
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
-                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -227,7 +224,7 @@ if (!$_SESSION['username']) {
     <script type="module" src="./js/module.js"></script>
 
     <script>
-    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

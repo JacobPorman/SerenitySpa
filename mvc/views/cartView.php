@@ -20,9 +20,10 @@ if (!$_SESSION['username']) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 
+    <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
+
     <style>
-        <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
-        include "./assets/libs/bootstrap/bootstrap.min.css";
+        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
         include "./assets/css/style.css";
         include "./assets/css/cart.css";
         ?>

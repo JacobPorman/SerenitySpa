@@ -16,12 +16,13 @@ if (!$_SESSION['username']) {
     <title>Chi tiết hóa đơn</title>
 
 
+    <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
+
     <style>
-    <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
-    include "./assets/libs/bootstrap/bootstrap.min.css";
-    include "./assets/css/admin.css";
-    include "./assets/css/quan_ly_don_hang.css";
-    ?>
+        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+        include "./assets/css/admin.css";
+        include "./assets/css/quan_ly_don_hang.css";
+        ?>
     </style>
 </head>
 
@@ -67,7 +68,7 @@ if (!$_SESSION['username']) {
     <div id="info"></div>
 
     <script>
-    <?php
+        <?php
         include "./assets/js/quan_ly_don_hang.js";
 
         ?>

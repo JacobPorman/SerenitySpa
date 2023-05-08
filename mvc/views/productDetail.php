@@ -16,13 +16,13 @@ if (!$_SESSION['username']) {
     <title>Quan Ly San Pham</title>
 
 
+    <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
 
     <style>
-    <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
-    include "./assets/libs/bootstrap/bootstrap.min.css";
-    include "./assets/css/admin.css";
-    include "./assets/css/style_content.css";
-    ?>
+        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+        include "./assets/css/admin.css";
+        include "./assets/css/style_content.css";
+        ?>
     </style>
 </head>
 
@@ -109,9 +109,9 @@ if (!$_SESSION['username']) {
     <script src="./manage.js"></script>
 
     <script>
-    window.onload = function() {
-        renderAll();
-    }
+        window.onload = function() {
+            renderAll();
+        }
     </script>
 </body>
 

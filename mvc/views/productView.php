@@ -16,13 +16,13 @@ if (!$_SESSION['username']) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sản phẩm</title>
 
+    <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
 
     <style>
-    <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
-    include "./assets/libs/bootstrap/bootstrap.min.css";
-    include "./assets/css/style.css";
-    include "./assets/css/product.css";
-    ?>
+        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+        include "./assets/css/style.css";
+        include "./assets/css/product.css";
+        ?>
     </style>
 </head>
 
@@ -299,8 +299,7 @@ if (!$_SESSION['username']) {
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
-                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -350,7 +349,7 @@ if (!$_SESSION['username']) {
 
 
     <script>
-    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 
