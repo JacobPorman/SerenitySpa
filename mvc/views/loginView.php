@@ -18,7 +18,7 @@ require_once "./mvc/core/basehref.php";
 
     <style>
     .main {
-        background: #9e9e9e;
+        background: #ebd6d6;
         min-height: 100vh;
         display: flex;
         justify-content: center;
@@ -40,6 +40,10 @@ require_once "./mvc/core/basehref.php";
         font-size: 2rem;
     }
 
+    .form a {
+        text-decoration: none;
+    }
+
     .form .desc {
         text-align: center;
         color: #636d77;
@@ -48,7 +52,13 @@ require_once "./mvc/core/basehref.php";
         line-height: 2.4rem;
         margin-top: 16px;
         font-weight: 300;
+        transition: all 0.2s;
     }
+
+    .form .desc:hover {
+        color: #c95a5a;
+    }
+
 
     .form-group {
         display: flex;

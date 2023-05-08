@@ -6,7 +6,7 @@ if (!$_SESSION['username']) {
 
 ?>
 
-@@ -0,0 +1,56 @@
+
 <!DOCTYPE html>
 <html>
 

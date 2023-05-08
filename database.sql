@@ -6,21 +6,19 @@ USE spa_database;
 -- CREATE TABLES
 
 CREATE TABLE users (
-	id int primary key auto_increment,
+	id int primary key auto_increment not null,
     name VARCHAR(50) NOT NULL,
     password varchar(24),
     phone int NOT NULL,
     email VARCHAR(100) NOT NULL,
-    address varchar(100),
-    username varchar(50) NOT NULL,
-    user_role VARCHAR(30) NOT NULL
+    user_role VARCHAR(30) default 'user'
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-insert into users (id, name, password, phone, email, address, username, user_role) values (1, 'hung', '123', 123, "hung123@gmail.com", 123, "hungng", "role_admin");
-insert into users (id, name, password, phone, email, address, username, user_role) values (2, 'hoa', '456', 456, "hoa123@gmail.com", 456, "hoatrung", "role_admin");
+-- insert into users (id, name, password, phone, email, user_role) values (1, 'hung', '123', 123, "hung123@gmail.com", "role_admin");
+-- insert into users (id, name, password, phone, email, user_role) values (2, 'hoa', '456', 456, "hoa123@gmail.com", "role_admin");
 
-insert into users (id, name, password, phone, email, address, username, user_role) values (3, 'hoang', '123', 123, "hoang123@gmail.com", 123, "hoangng", "role_admin");
-insert into users (id, name, password, phone, email, address, username, user_role) values (4, 'hoangng', '123', 123, "hoangng123@gmail.com", 123, "hoangggng", "role_admin");
+-- insert into users (id, name, password, phone, email, user_role) values (3, 'hoang', '123', 123, "hoang123@gmail.com", "role_admin");
+-- insert into users (id, name, password, phone, email, user_role) values (4, 'hoangng', '123', 123, "hoangng123@gmail.com", "role_admin");
 
 
 
@@ -30,6 +28,18 @@ create table `categories` (
 	name varchar(50) not null,
     primary key(id)
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+insert into `categories` (`id`, `name`) values (1, 'Chăm sóc mắt');
+insert into `categories` (`id`, `name`) values (2, 'Chăm sóc môi');
+insert into `categories` (`id`, `name`) values (3, 'Chống nắng');
+insert into `categories` (`id`, `name`) values (4, 'Da bị dị ứng');
+insert into `categories` (`id`, `name`) values (5, 'Da hỗn hợp');
+insert into `categories` (`id`, `name`) values (6, 'Dưỡng ẩm');
+insert into `categories` (`id`, `name`) values (7, 'Mặt nạ');
+insert into `categories` (`id`, `name`) values (8, 'Serum');
+insert into `categories` (`id`, `name`) values (9, 'Sữa rửa mặt');
+insert into `categories` (`id`, `name`) values (10, 'Tẩy tế bào chết');
+
 
 
 create table product (
