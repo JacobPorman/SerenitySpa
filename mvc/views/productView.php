@@ -10,6 +10,7 @@ if (!$_SESSION['username']) {
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,11 +18,11 @@ if (!$_SESSION['username']) {
 
 
     <style>
-        <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
-        include "./assets/libs/bootstrap/bootstrap.min.css";
-        include "./assets/css/style.css";
-        include "./assets/css/product.css";
-        ?>
+    <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
+    include "./assets/libs/bootstrap/bootstrap.min.css";
+    include "./assets/css/style.css";
+    include "./assets/css/product.css";
+    ?>
     </style>
 </head>
 
@@ -30,7 +31,7 @@ if (!$_SESSION['username']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="./index.html"><img src="./image/logo/logo(500x300).png" alt="SpaLogo" /></a>
+                <a href="home"><img src="./assets/image/logo/logo(500x300).png" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -42,7 +43,7 @@ if (!$_SESSION['username']) {
                             </a>
                         </div>
                         <div class="shopping-cart">
-                            <a href="./cart.html" class="shopping_icon">
+                            <a href="cart" class="shopping_icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </a>
                         </div>
@@ -56,18 +57,18 @@ if (!$_SESSION['username']) {
                 <!-- Links -->
                 <ul class="navbar-nav">
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./gioi-thieu.html">Giới Thiệu</a>
+                        <a class="nav-link" href="intro">Giới Thiệu</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./product.html">Sản Phẩm
+                        <a class="nav-link" href="product">Sản Phẩm
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="#">Thông Tin</a>
+                        <a class="nav-link" href="info">Thông Tin</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./lienhe.html">Liên Hệ</a>
+                        <a class="nav-link" href="connect">Liên Hệ</a>
                     </li>
                 </ul>
             </nav>
@@ -151,7 +152,7 @@ if (!$_SESSION['username']) {
                     <div class="nav-product">
                         <ol>
                             <li class="breadcumb-item">
-                                <a href="./index.html" target="_blank">Trang chủ&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a href="home" target="_blank">Trang chủ&nbsp;&nbsp;&nbsp;&nbsp;</a>
                             </li>
                             &frasl;
                             <li class="breadcumb-item" style="font-weight: bold">
@@ -163,7 +164,7 @@ if (!$_SESSION['username']) {
                     <div class="product-list">
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -173,7 +174,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -183,7 +184,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -193,7 +194,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -203,7 +204,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -213,7 +214,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -223,7 +224,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -233,7 +234,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -243,7 +244,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -253,7 +254,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -263,7 +264,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -273,7 +274,7 @@ if (!$_SESSION['username']) {
                         </div>
                         <div class="product-item">
                             <a href="#">
-                                <img src="./image/product/product-1.jpg" alt="" class="img" />
+                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
                                 <p class="bl-1">1.485.000</p>
                                 <h3 class="text-3">
                                     Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
@@ -292,13 +293,14 @@ if (!$_SESSION['username']) {
         <div class="cover-footer">
             <div class="content-footer" style="text-align: justify">
                 <div class="col-footer">
-                    <img src="./image/logo/logo(500x300).png" alt="" />
+                    <img src="./assets/image/logo/logo(500x300).png" alt="" />
                     <div class="icon-footer">
                         <div>
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
+                                    class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -348,7 +350,7 @@ if (!$_SESSION['username']) {
 
 
     <script>
-        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

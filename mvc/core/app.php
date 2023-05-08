@@ -5,8 +5,8 @@ use function PHPSTORM_META\type;
 class app
 {
 
-    protected $controller = "Home";
-    protected $action = "defaultView";
+    protected $controller = "Home"; // file name
+    protected $action = "defaultView"; // method in this file
     protected $params = [];
 
 

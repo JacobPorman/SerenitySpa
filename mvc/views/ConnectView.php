@@ -10,6 +10,7 @@ if (!$_SESSION['username']) {
 <html lang="en">
 
 <head>
+
     <title>Liên hệ</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -19,11 +20,11 @@ if (!$_SESSION['username']) {
 
 
     <style>
-        <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
-        include "./assets/libs/bootstrap/bootstrap.min.css";
-        include "./assets/css/style.css";
-        include "./assets/css/lienhe.css";
-        ?>
+    <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
+    include "./assets/libs/bootstrap/bootstrap.min.css";
+    include "./assets/css/style.css";
+    include "./assets/css/lienhe.css";
+    ?>
     </style>
 </head>
 
@@ -32,7 +33,7 @@ if (!$_SESSION['username']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="./index.html"><img src="./image/logo/logo(500x300).png" alt="SpaLogo" /></a>
+                <a href="home"><img src="./assets/image/logo/logo(500x300).png" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -44,7 +45,7 @@ if (!$_SESSION['username']) {
                             </a>
                         </div>
                         <div class="shopping-cart">
-                            <a href="./cart.html" class="shopping_icon">
+                            <a href="cart" class="shopping_icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </a>
                         </div>
@@ -58,18 +59,18 @@ if (!$_SESSION['username']) {
                 <!-- Links -->
                 <ul class="navbar-nav">
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./gioi-thieu.html">Giới Thiệu</a>
+                        <a class="nav-link" href="intro">Giới Thiệu</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./product.html">Sản Phẩm
+                        <a class="nav-link" href="product">Sản Phẩm
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="#">Thông Tin</a>
+                        <a class="nav-link" href="info">Thông Tin</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./lienhe.html">Liên Hệ</a>
+                        <a class="nav-link" href="connect">Liên Hệ</a>
                     </li>
                 </ul>
             </nav>
@@ -80,7 +81,10 @@ if (!$_SESSION['username']) {
     <main>
         <div class="container">
             <div class="map" id="map" style="width:100%;height:500px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.105804878304!2d106.71803137490824!3d10.803207889347203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a6df63ab19%3A0x777eface27865ce8!2zMTY4IE5ndXnhu4VuIFbEg24gVGjGsMahbmcsIFBoxrDhu51uZyAyNSwgQsOsbmggVGjhuqFuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oIDcwMDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1680249276952!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.105804878304!2d106.71803137490824!3d10.803207889347203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a6df63ab19%3A0x777eface27865ce8!2zMTY4IE5ndXnhu4VuIFbEg24gVGjGsMahbmcsIFBoxrDhu51uZyAyNSwgQsOsbmggVGjhuqFuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oIDcwMDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1680249276952!5m2!1svi!2s"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="content">
                 <div class="content-address">
@@ -136,19 +140,19 @@ if (!$_SESSION['username']) {
                 <div class="counsel">
                     <div class="cashier">
                         <div>
-                            <img src="./image/lien-he/e652983af541071f5e50.jpg">
+                            <img src="./assets/image/lien-he/e652983af541071f5e50.jpg">
                             <span style="font-size: 13px;">MS. Thủy</span>
                             <br>
                             <span style="font-size: 13px;font-style: italic;">Tư vấn - Bán hàng</span>
                         </div>
                         <div>
-                            <img src="./image/lien-he/556a0a54672f9571cc3e.jpg">
+                            <img src="./assets/image/lien-he/556a0a54672f9571cc3e.jpg">
                             <span style="font-size: 13px;">MS. Thúy</span>
                             <br>
                             <span style="font-size: 13px;font-style: italic;">Tư vấn - Bán hàng</span>
                         </div>
                         <div>
-                            <img src="./image/lien-he/d7a98d71e10a13544a1b.jpg">
+                            <img src="./assets/image/lien-he/d7a98d71e10a13544a1b.jpg">
                             <span style="font-size: 13px;">MS. Anh</span>
 
                             <br>
@@ -165,13 +169,14 @@ if (!$_SESSION['username']) {
         <div class="cover-footer">
             <div class="content-footer">
                 <div class="col-footer">
-                    <img src="./image/logo/logo(500x300).png" alt="" />
+                    <img src="./assets/image/logo/logo(500x300).png" alt="" />
                     <div class="icon-footer">
                         <div>
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
+                                    class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -222,7 +227,7 @@ if (!$_SESSION['username']) {
     <script type="module" src="./js/module.js"></script>
 
     <script>
-        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

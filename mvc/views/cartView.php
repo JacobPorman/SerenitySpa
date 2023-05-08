@@ -10,6 +10,7 @@ if (!$_SESSION['username']) {
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@ if (!$_SESSION['username']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="./index.html"><img src="./image/logo/logo(500x300).png" alt="SpaLogo" /></a>
+                <a href="home"><img src="./assets/image/logo/logo(500x300).png" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -46,7 +47,7 @@ if (!$_SESSION['username']) {
                             </a>
                         </div>
                         <div class="shopping-cart">
-                            <a href="./cart.html" class="shopping_icon">
+                            <a href="cart" class="shopping_icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </a>
                         </div>
@@ -60,18 +61,18 @@ if (!$_SESSION['username']) {
                 <!-- Links -->
                 <ul class="navbar-nav">
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./gioi-thieu.html">Giới Thiệu</a>
+                        <a class="nav-link" href="intro">Giới Thiệu</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./product.html">Sản Phẩm
+                        <a class="nav-link" href="product">Sản Phẩm
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="#">Thông Tin</a>
+                        <a class="nav-link" href="info">Thông Tin</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./lienhe.html">Liên Hệ</a>
+                        <a class="nav-link" href="connect">Liên Hệ</a>
                     </li>
                 </ul>
             </nav>
@@ -351,7 +352,7 @@ if (!$_SESSION['username']) {
         <div class="cover-footer">
             <div class="content-footer">
                 <div class="col-footer">
-                    <img src="./image/logo/logo(500x300).png" alt="" />
+                    <img src="./assets/image/logo/logo(500x300).png" alt="" />
                     <div class="icon-footer">
                         <div>
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>

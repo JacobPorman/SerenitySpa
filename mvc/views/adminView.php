@@ -9,18 +9,20 @@ if (!$_SESSION['username']) {
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
 
     <style>
-        <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
-        include "./assets/libs/bootstrap/bootstrap.min.css";
-        include "./assets/css/admin.css";
-        ?>
+    <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
+    include "./assets/libs/bootstrap/bootstrap.min.css";
+    include "./assets/css/admin.css";
+    ?>
     </style>
 </head>
 
@@ -28,7 +30,7 @@ if (!$_SESSION['username']) {
     <section class="admin">
         <div class="navbar">
             <div class="navbar-logo">
-                <img src="./image/logo/logo(500x300).png" alt="" />
+                <img src="./assets/image/logo/logo(500x300).png" alt="" />
             </div>
 
             <div class="navbar-menu">
@@ -36,7 +38,7 @@ if (!$_SESSION['username']) {
                     <li class="nav-item nav-profile">
                         <div class="nav-profile">
                             <div class="nav-profile-img">
-                                <img src="../FE/image/logo/admin.png" alt="" />
+                                <img src="./assets/image/logo/admin.png" alt="" />
                             </div>
                             <div class="nav-profile-text">
                                 <p>Nguyen Q Toan</p>
@@ -241,7 +243,8 @@ if (!$_SESSION['username']) {
 
                                 <div>
                                     <label for="product-images">Hình ảnh:</label>
-                                    <input type="file" id="product-images" name="product-images" accept="image/*" multiple />
+                                    <input type="file" id="product-images" name="product-images" accept="image/*"
+                                        multiple />
                                 </div>
 
                                 <div class="button">
@@ -257,7 +260,7 @@ if (!$_SESSION['username']) {
 
 
     <script>
-        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

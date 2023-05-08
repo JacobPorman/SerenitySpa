@@ -1,0 +1,28 @@
+/* Infomation */
+
+.title-cont {
+  margin: 20px 0;
+}
+.title-cont img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.list-cont {
+  text-align: left;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  font-style: normal;
+  font-size: unset !important;
+  margin-top: unset !important;
+  line-height: unset !important;
+  min-height: 500px;
+  margin: 40px 0;
+}
+.list-cont img {
+  max-width: 100%;
+  border-radius: 10px;
+}

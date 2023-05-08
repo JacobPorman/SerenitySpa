@@ -10,6 +10,7 @@ if (!$_SESSION['username']) {
 <html lang="en">
 
 <head>
+
     <title>Giới thiệu</title>
 
     <!-- Required meta tags -->
@@ -19,11 +20,11 @@ if (!$_SESSION['username']) {
     <!-- Style CSS -->
 
     <style>
-    <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
-    include "./assets/libs/bootstrap/bootstrap.min.css";
-    include "./assets/css/style.css";
-    include "./assets/css/gioi-thieu.css";
-    ?>
+        <?php include "./assets/libs/font-awesome/css/fontawesome.min.css";
+        include "./assets/libs/bootstrap/bootstrap.min.css";
+        include "./assets/css/style.css";
+        include "./assets/css/gioi-thieu.css";
+        ?>
     </style>
 </head>
 
@@ -32,7 +33,7 @@ if (!$_SESSION['username']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="./index.html"><img src="./image/logo/logo(500x300).png" alt="SpaLogo" /></a>
+                <a href="home"><img src="./assets/image/logo/logo(500x300).png" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -44,7 +45,7 @@ if (!$_SESSION['username']) {
                             </a>
                         </div>
                         <div class="shopping-cart">
-                            <a href="./cart.html" class="shopping_icon">
+                            <a href="cart" class="shopping_icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </a>
                         </div>
@@ -58,18 +59,18 @@ if (!$_SESSION['username']) {
                 <!-- Links -->
                 <ul class="navbar-nav">
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./gioi-thieu.html">Giới Thiệu</a>
+                        <a class="nav-link" href="intro">Giới Thiệu</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./product.html">Sản Phẩm
+                        <a class="nav-link" href="product">Sản Phẩm
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="#">Thông Tin</a>
+                        <a class="nav-link" href="info">Thông Tin</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="./lienhe.html">Liên Hệ</a>
+                        <a class="nav-link" href="connect">Liên Hệ</a>
                     </li>
                 </ul>
             </nav>
@@ -80,7 +81,7 @@ if (!$_SESSION['username']) {
     <main>
         <div class="header-main">
             <div class="left-head">
-                <img class="logo" src="./image/logo/logo(500x300).png" alt="" />
+                <img class="logo" src="./assets/image/logo/logo(500x300).png" alt="" />
                 <h1>TỪ ĐIỂM BẮT ĐẦU TỚI ĐÍCH ĐẾN LÀ LÀN DA KHỎE MẠNH!</h1>
                 <p>
                     IMAGE Skincare là một thương hiệu dược mỹ phẩm được tạo ra – ngay từ
@@ -95,13 +96,13 @@ if (!$_SESSION['username']) {
                 </p>
             </div>
             <div class="right-head">
-                <img src="./image/gioi-thieu/mau-nu-2-420x500.png" alt="" />
+                <img src="./assets/image/gioi-thieu/mau-nu-2-420x500.png" alt="" />
             </div>
         </div>
         <div class="mid-main">
             <div class="top-mid-main">
                 <div class="left-mid">
-                    <img src="./image/gioi-thieu/mau-nu-768x1157.png" alt="" />
+                    <img src="./assets/image/gioi-thieu/mau-nu-768x1157.png" alt="" />
                 </div>
                 <div class="right-mid">
                     <p>
@@ -117,16 +118,16 @@ if (!$_SESSION['username']) {
                     </p>
                     <div class="list-radiusimg">
                         <div>
-                            <img src="./image/gioi-thieu/icon-tron-1-150x150.png" alt="" />
+                            <img src="./assets/image/gioi-thieu/icon-tron-1-150x150.png" alt="" />
                         </div>
                         <div>
-                            <img src="./image/gioi-thieu/icon-tron-2-150x150.png" alt="" />
+                            <img src="./assets/image/gioi-thieu/icon-tron-2-150x150.png" alt="" />
                         </div>
                         <div>
-                            <img src="./image/gioi-thieu/icon-tron-3-150x150.png" alt="" />
+                            <img src="./assets/image/gioi-thieu/icon-tron-3-150x150.png" alt="" />
                         </div>
                         <div>
-                            <img src="./image/gioi-thieu/icon-tron-4-150x150.png" alt="" />
+                            <img src="./assets/image/gioi-thieu/icon-tron-4-150x150.png" alt="" />
                         </div>
                     </div>
                     <p>
@@ -163,7 +164,7 @@ if (!$_SESSION['username']) {
             </div>
         </div>
         <div class="img-main">
-            <img src="./image/gioi-thieu/ghmxfj3523ttir.png" alt="" />
+            <img src="./assets/image/gioi-thieu/ghmxfj3523ttir.png" alt="" />
         </div>
         <div class="bot-main">
             <div class="content-left">
@@ -194,7 +195,7 @@ if (!$_SESSION['username']) {
                 </p>
             </div>
             <div class="img-right">
-                <img src="./image/gioi-thieu/banner-su-menh.jpg" alt="" />
+                <img src="./assets/image/gioi-thieu/banner-su-menh.jpg" alt="" />
             </div>
         </div>
         <div class="last-text">
@@ -208,7 +209,7 @@ if (!$_SESSION['username']) {
         </div>
         <div class="finally">
             <div class="img-finally">
-                <img src="./image/gioi-thieu/janna.jpg" alt="" />
+                <img src="./assets/image/gioi-thieu/janna.jpg" alt="" />
             </div>
             <div class="content-finally">
                 <h3>CÂU CHUYỆN CỦA NHÀ SÁNG LẬP JANA</h3>
@@ -259,14 +260,13 @@ if (!$_SESSION['username']) {
         <div class="cover-footer">
             <div class="content-footer">
                 <div class="col-footer">
-                    <img src="./image/logo/logo(500x300).png" alt="" />
+                    <img src="./assets/image/logo/logo(500x300).png" alt="" />
                     <div class="icon-footer">
                         <div>
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
-                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -316,7 +316,7 @@ if (!$_SESSION['username']) {
     <script type="module" src="./js/module.js"></script>
 
     <script>
-    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

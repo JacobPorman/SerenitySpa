@@ -1,7 +1,5 @@
 <?php
 
-echo "db </br>";
-
 class db
 {
     public $connect;

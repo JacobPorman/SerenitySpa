@@ -16,6 +16,15 @@ CREATE TABLE users (
     user_role VARCHAR(30) NOT NULL
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+insert into users (id, name, password, phone, email, address, username, user_role) values (1, 'hung', '123', 123, "hung123@gmail.com", 123, "hungng", "role_admin");
+insert into users (id, name, password, phone, email, address, username, user_role) values (2, 'hoa', '456', 456, "hoa123@gmail.com", 456, "hoatrung", "role_admin");
+
+insert into users (id, name, password, phone, email, address, username, user_role) values (3, 'hoang', '123', 123, "hoang123@gmail.com", 123, "hoangng", "role_admin");
+insert into users (id, name, password, phone, email, address, username, user_role) values (4, 'hoangng', '123', 123, "hoangng123@gmail.com", 123, "hoangggng", "role_admin");
+
+
+
+
 create table `categories` (
 	id int auto_increment,
 	name varchar(50) not null,
