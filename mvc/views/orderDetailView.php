@@ -4,6 +4,7 @@ if (!$_SESSION['username']) {
     header("Location: " . geturl() . "/login/loginView");
 }
 
+
 ?>
 
 
@@ -42,8 +43,8 @@ if (!$_SESSION['username']) {
 
         <ul class="left-nav">
             <li>
-                <a href="index.html"><i class="fa-solid fa-house admin-icon"></i></a>
-                <a href="index.html">Trang chủ</a>
+                <a href="<?php echo getUrl() . "/home" ?>"><i class="fa-solid fa-house admin-icon"></i></a>
+                <a href="<?php echo getUrl() . "/home" ?>">Trang chủ</a>
             </li>
             <li>
                 <a href="quan_ly_san_pham.html"><i class="fa-solid fa-shirt admin-icon"></i></a>

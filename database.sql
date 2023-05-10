@@ -14,11 +14,14 @@ CREATE TABLE users (
     user_role VARCHAR(30) default 'user'
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-insert into users (id, name, password, phone, email, user_role) values (1, 'hung', '123', 123, "hung123@gmail.com", "admin");
-insert into users (id, name, password, phone, email, user_role) values (2, 'hoa', '456', 456, "hoa123@gmail.com", "user");
+-- 123
+insert into users (id, name, password, phone, email, user_role) values (1, 'hung', '$2y$10$jt2.6I2j7hnnrK2GOXIi7eIwe6sTh1ONCQ3vky5eIlD3sMKqlVnQS', 123, "hung123@gmail.com", "admin");
+-- 456
+insert into users (id, name, password, phone, email, user_role) values (2, 'hoa', '$2y$10$mwc3q/IUw4dLSVLLZ/i8YuJnvIv3XubQcldWZ7Kh7Kt7GY63kWo86', 456, "hoa123@gmail.com", "user");
 
-insert into users (id, name, password, phone, email, user_role) values (3, 'hoang', '123', 123, "hoang123@gmail.com", "user");
-insert into users (id, name, password, phone, email, user_role) values (4, 'hoangng', '123', 123, "hoangng123@gmail.com", "user");
+-- 123
+insert into users (id, name, password, phone, email, user_role) values (3, 'hoang', '$2y$10$jt2.6I2j7hnnrK2GOXIi7eIwe6sTh1ONCQ3vky5eIlD3sMKqlVnQS', 123, "hoang123@gmail.com", "user");
+insert into users (id, name, password, phone, email, user_role) values (4, 'hoangng', '$2y$10$jt2.6I2j7hnnrK2GOXIi7eIwe6sTh1ONCQ3vky5eIlD3sMKqlVnQS', 123, "hoangng123@gmail.com", "user");
 
 
 
@@ -121,6 +124,12 @@ create table `orders` (
     primary key(id),
     constraint fk_user_id foreign key(user_id) references users (id)
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- INSERT INTO `order_product` (`order_id`, `quantity`, `user_member`, `product_id`) VALUES
+-- (1, 1, 1, 1),
+-- (2, 2, 2, 3),
+-- (3, 12, 5, 2);
+
 
 create table `orderdetail` (
 	product_id int default null,

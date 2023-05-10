@@ -20,19 +20,19 @@ class ProductsModel extends db
 
     public function getAllProductsOfCategory($category)
     {
-        $qr = "SELECT * FROM PRODUCTS WHERE product_type='" . $category . "'";
+        $qr = "SELECT * FROM product WHERE cate_id='" . $category . "'";
         return mysqli_query($this->connect, $qr);
     }
 
     public function getRelatedProducts($category)
     {
-        $qr = "SELECT product_id, product_name, product_price, product_image FROM products WHERE product_type='" . $category . "'";
+        $qr = "SELECT id, title, image, price FROM product WHERE cate_id='" . $category . "'";
         return mysqli_query($this->connect, $qr);
     }
 
     public function getProduct($product_id)
     {
-        $qr = "SELECT * FROM PRODUCTS WHERE product_id = $product_id";
+        $qr = "SELECT * FROM product WHERE id = $product_id";
         return mysqli_query($this->connect, $qr);
     }
 

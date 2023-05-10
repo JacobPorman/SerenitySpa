@@ -53,10 +53,10 @@ if (!$_SESSION['username']) {
                             </a>
                         </div>
                         <div class="message-user">
-                            <?php if ($_SESSION['username'] == 1) echo "<li><a href=\"<?php echo getURL() . '/admin/adminView' ?>\">Admin</a>
+                            <?php if ($_SESSION['username']['user_role'] == 'admin') echo "<li><a href=" . getURL() . "/admin" . ">Admin</a>
                             </li>
-                            <li><a href=\"login/logout\">Logout</a></li>";
-                            else echo "<li><a href=\"login/logout\">Logout</a></li>"; ?>
+                            <li><a href=" . getURL() . "/login/logout" .">Logout</a></li>";
+                            else echo "<li><a href=" . getURL() . "/login/logout" .">Logout</a></li>"; ?>
                         </div>
                     </div>
                 </form>

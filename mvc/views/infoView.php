@@ -21,11 +21,11 @@ if (!$_SESSION['username']) {
     <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
 
     <style>
-        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
-        include "./assets/css/style.css";
-        include "./assets/css/admin.css";
-        include "./assets/css/index.css";
-        ?>
+    <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+    include "./assets/css/style.css";
+    include "./assets/css/admin.css";
+    include "./assets/css/index.css";
+    ?>
     </style>
 </head>
 
@@ -51,8 +51,10 @@ if (!$_SESSION['username']) {
                             </a>
                         </div>
                         <div class="message-user">
-                            <?php if ($_SESSION['username'] == 1) echo "<li><a href=\"manage/viewProductPage/1\">Admin</a></li><li><a href=\"login/logout\">Logout</a></li>";
-                            else echo "<li><a href=\"login/logout\">Logout</a></li>"; ?>
+                            <?php if ($_SESSION['username']['user_role'] == 'admin') echo "<li><a href=" . getURL() . "/admin" . ">Admin</a>
+                            </li>
+                            <li><a href=" . getURL() . "/login/logout" .">Logout</a></li>";
+                            else echo "<li><a href=" . getURL() . "/login/logout" .">Logout</a></li>"; ?>
                         </div>
                     </div>
                 </form>
@@ -266,7 +268,8 @@ if (!$_SESSION['username']) {
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
+                                    class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -317,7 +320,7 @@ if (!$_SESSION['username']) {
     <script type="module" src="./js/module.js"></script>
 
     <script>
-        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

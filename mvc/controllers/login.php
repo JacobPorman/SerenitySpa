@@ -18,7 +18,7 @@ class Login extends Controller
             location.href = '" . geturl() . "/login/loginView';
         </script>";
         } else {
-            $_SESSION['username'] = $demoData[0]['id'];
+            $_SESSION['username'] = $demoData[0];
             header("Location: " . geturl() . "/home");
         }
     }

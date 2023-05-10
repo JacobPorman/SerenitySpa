@@ -35,7 +35,8 @@ if (!$_SESSION['username']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="home"><img src="./assets/image/logo/logo(500x300).png" alt="SpaLogo" /></a>
+                <a href="<?php echo getURL() . "/home" ?>"><img
+                        src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -52,8 +53,10 @@ if (!$_SESSION['username']) {
                             </a>
                         </div>
                         <div class="message-user">
-                            <?php if ($_SESSION['username'] == 1) echo "<li><a href=\"manage/viewProductPage/1\">Admin</a></li><li><a href=\"login/logout\">Logout</a></li>";
-                            else echo "<li><a href=\"login/logout\">Logout</a></li>"; ?>
+                            <?php if ($_SESSION['username']['user_role'] == 'admin') echo "<li><a href=" . getURL() . "/admin" . ">Admin</a>
+                            </li>
+                            <li><a href=" . getURL() . "/login/logout" . ">Logout</a></li>";
+                            else echo "<li><a href=" . getURL() . "/login/logout" . ">Logout</a></li>"; ?>
                         </div>
                     </div>
                 </form>
@@ -65,18 +68,18 @@ if (!$_SESSION['username']) {
                 <!-- Links -->
                 <ul class="navbar-nav">
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="intro">Giới Thiệu</a>
+                        <a class="nav-link" href="<?php echo getURL() . "/intro" ?>">Giới Thiệu</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="product">Sản Phẩm
+                        <a class="nav-link" href="<?php echo getURL() . "/product" ?>">Sản Phẩm
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="info">Thông Tin</a>
+                        <a class="nav-link" href="<?php echo getURL() . "/info" ?>">Thông Tin</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="connect">Liên Hệ</a>
+                        <a class="nav-link" href="<?php echo getURL() . "/connect" ?>">Liên Hệ</a>
                     </li>
                 </ul>
             </nav>
@@ -97,10 +100,10 @@ if (!$_SESSION['username']) {
                             while ($row = mysqli_fetch_array($data["all-type"])) {
                                 echo '
                                 <li class="item">
-                                <a href="#">
-                                    <span class="text-1">' . $row["name"] . '</span>
-                                    <span class="text-2">'.$row["id"].'</span>
-                                </a>
+                                <a href=' . getURL() . '/product/category/' . $row["id"] . '>
+                            <span class="text-1">' . $row["name"] . '</span>
+                            <span class="text-2">' . $row["id"] . '</span>
+                            </a>
                             </li>';
                             };
                             ?>
@@ -111,7 +114,7 @@ if (!$_SESSION['username']) {
                     <div class="nav-product">
                         <ol>
                             <li class="breadcumb-item">
-                                <a href="home" target="_blank">Trang chủ&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a href="<?php echo getURL() . "/home" ?>">Trang chủ&nbsp;&nbsp;&nbsp;&nbsp;</a>
                             </li>
                             &frasl;
                             <li class="breadcumb-item" style="font-weight: bold">
@@ -122,20 +125,20 @@ if (!$_SESSION['username']) {
 
                     <div class="product-list">
                         <?php
-                            while ($row = mysqli_fetch_array($data["all-pro"])) {
-                                echo '
+                        while ($row = mysqli_fetch_array($data["all-pro"])) {
+                            echo '
                                 <div class="product-item">
-                            <a href="#">
-                                <img src="'. $row["image"] .'" alt="" class="img" />
-                                <p class="bl-1">'. $row["price"] .'</p>
+                            <a href=' . getURL() . '/product/productdetail/' . $row["id"] . '>
+                                <img src="' . $row["image"] . '" alt="" class="img" />
+                                <p class="bl-1">' . $row["price"] . '</p>
                                 <h3 class="text-3">
-                                '. $row["title"] .'
+                                ' . $row["title"] . '
                                 </h3>
                             </a>
                         </div>
                                 ';
-                            };
-                            ?>
+                        };
+                        ?>
 
 
                     </div>

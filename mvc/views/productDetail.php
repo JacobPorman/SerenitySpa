@@ -33,8 +33,8 @@ if (!$_SESSION['username']) {
         </div>
         <ul class="left-nav">
             <li>
-                <a href="index.html"><i class="fa-solid fa-house admin-icon"></i></a>
-                <a href="index.html">Trang chủ</a>
+                <a href="<?php echo getUrl() . "/home" ?>"><i class="fa-solid fa-house admin-icon"></i></a>
+                <a href="<?php echo getUrl() . "/home" ?>">Trang chủ</a>
             </li>
             <li>
                 <a href="quan_ly_san_pham.html"><i class="fa-solid fa-shirt admin-icon"></i></a>
@@ -107,6 +107,8 @@ if (!$_SESSION['username']) {
 
     </div>
     <script src="./manage.js"></script>
+    <script src="/assets/js/manage.js"></script>
+
 
     <script>
         window.onload = function() {
