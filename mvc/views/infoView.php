@@ -22,6 +22,7 @@ if (!$_SESSION['username']) {
 
     <style>
         <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+        include "./assets/css/style.css";
         include "./assets/css/admin.css";
         include "./assets/css/index.css";
         ?>
@@ -48,6 +49,10 @@ if (!$_SESSION['username']) {
                             <a href="cart" class="shopping_icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </a>
+                        </div>
+                        <div class="message-user">
+                            <?php if ($_SESSION['username'] == 1) echo "<li><a href=\"manage/viewProductPage/1\">Admin</a></li><li><a href=\"login/logout\">Logout</a></li>";
+                            else echo "<li><a href=\"login/logout\">Logout</a></li>"; ?>
                         </div>
                     </div>
                 </form>

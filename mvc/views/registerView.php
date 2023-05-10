@@ -1,7 +1,7 @@
 <?php
 require_once "./mvc/core/basehref.php";
-$home_url = getUrl() . '/';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,7 +136,7 @@ $home_url = getUrl() . '/';
 <body>
 
     <div class="main">
-        <form method="POST" class="form" id="form-1" action="login/register">
+        <form method="POST" class="form" id="form-1" action="<?php echo getUrl() . "/login/register" ?>">
 
             <h3 class="heading">Register</h3>
             <p class="desc">Connect to the shop</p>
@@ -144,25 +144,25 @@ $home_url = getUrl() . '/';
 
             <div class="form-group">
                 <label for="fullname" class="form-label">Full Name</label>
-                <input id="fullname" name="member_name" type="text" placeholder="Enter your fullname" class="form-control">
+                <input id="fullname" name="name" type="text" placeholder="Enter your fullname" class="form-control">
                 <span class="form-message"></span>
             </div>
 
             <div class="form-group">
                 <label for="phonenumber" class="form-label">Phone</label>
-                <input id="phonenumber" name="member_phone" type="number" placeholder="+ 84" class="form-control">
+                <input id="phonenumber" name="phone" type="number" placeholder="+ 84" class="form-control">
                 <span class="form-message"></span>
             </div>
 
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
-                <input id="email" name="member_email" type="email" placeholder="Enter your email" class="form-control">
+                <input id="email" name="email" type="email" placeholder="Enter your email" class="form-control">
                 <span class="form-message"></span>
             </div>
 
             <div class="form-group">
                 <label for="password" class="form-label">Password</label>
-                <input id="password" name="member_password" type="password" placeholder="Enter your password" class="form-control">
+                <input id="password" name="password" type="password" placeholder="Enter your password" class="form-control">
                 <span class="form-message"></span>
             </div>
             <button class="form-submit" type="submit">Submit</button>

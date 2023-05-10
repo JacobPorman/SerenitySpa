@@ -154,6 +154,24 @@ html {
   font-size: 13px;
 }
 
+/* Message User */
+
+#header .message-user a,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: #000000de;
+}
+
+#header .message-user a:hover {
+  color: rgb(222, 64, 64);
+}
+
+#header .message-user {
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
 /* Footer */
 
 .cover-footer {

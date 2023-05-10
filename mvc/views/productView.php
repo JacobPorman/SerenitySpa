@@ -4,6 +4,10 @@ if (!$_SESSION['username']) {
     header("Location: " . geturl() . "/login/loginView");
 }
 
+// echo "<pre>";
+// echo print_r($data);
+// echo "</pre>";
+
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +23,10 @@ if (!$_SESSION['username']) {
     <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
 
     <style>
-        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
-        include "./assets/css/style.css";
-        include "./assets/css/product.css";
-        ?>
+    <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+    include "./assets/css/style.css";
+    include "./assets/css/product.css";
+    ?>
     </style>
 </head>
 
@@ -46,6 +50,10 @@ if (!$_SESSION['username']) {
                             <a href="cart" class="shopping_icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </a>
+                        </div>
+                        <div class="message-user">
+                            <?php if ($_SESSION['username'] == 1) echo "<li><a href=\"manage/viewProductPage/1\">Admin</a></li><li><a href=\"login/logout\">Logout</a></li>";
+                            else echo "<li><a href=\"login/logout\">Logout</a></li>"; ?>
                         </div>
                     </div>
                 </form>
@@ -85,66 +93,17 @@ if (!$_SESSION['username']) {
 
                     <div class="cate-list">
                         <ol class="list">
-                            <li class="item">
+                            <?php
+                            while ($row = mysqli_fetch_array($data["all-type"])) {
+                                echo '
+                                <li class="item">
                                 <a href="#">
-                                    <span class="text-1">Chăm sóc mắt</span>
-                                    <span class="text-2">7</span>
+                                    <span class="text-1">' . $row["name"] . '</span>
+                                    <span class="text-2">'.$row["id"].'</span>
                                 </a>
-                            </li>
-                            <li class="item">
-                                <a href="#">
-                                    <span class="text-1">Chăm sóc mắt</span>
-                                    <span class="text-2">7</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#">
-                                    <span class="text-1">Chăm sóc mắt</span>
-                                    <span class="text-2">7</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#">
-                                    <span class="text-1">Chăm sóc mắt</span>
-                                    <span class="text-2">7</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#">
-                                    <span class="text-1">Chăm sóc mắt</span>
-                                    <span class="text-2">7</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#">
-                                    <span class="text-1">Chăm sóc mắt</span>
-                                    <span class="text-2">7</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#">
-                                    <span class="text-1">Chăm sóc mắt</span>
-                                    <span class="text-2">7</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#">
-                                    <span class="text-1">Chăm sóc mắt</span>
-                                    <span class="text-2">7</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#">
-                                    <span class="text-1">Chăm sóc mắt</span>
-                                    <span class="text-2">7</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#">
-                                    <span class="text-1">Chăm sóc mắt</span>
-                                    <span class="text-2">7</span>
-                                </a>
-                            </li>
+                            </li>';
+                            };
+                            ?>
                         </ol>
                     </div>
                 </section>
@@ -162,126 +121,23 @@ if (!$_SESSION['username']) {
                     </div>
 
                     <div class="product-list">
-                        <div class="product-item">
+                        <?php
+                            while ($row = mysqli_fetch_array($data["all-pro"])) {
+                                echo '
+                                <div class="product-item">
                             <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
+                                <img src="'. $row["image"] .'" alt="" class="img" />
+                                <p class="bl-1">'. $row["price"] .'</p>
                                 <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
+                                '. $row["title"] .'
                                 </h3>
                             </a>
                         </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="product-item">
-                            <a href="#">
-                                <img src="./assets/image/product/product-1.jpg" alt="" class="img" />
-                                <p class="bl-1">1.485.000</p>
-                                <h3 class="text-3">
-                                    Kem trị thâm quầng mắt Image Vital C Hydrating Eyye Recovery
-                                    Gel
-                                </h3>
-                            </a>
-                        </div>
+                                ';
+                            };
+                            ?>
+
+
                     </div>
                 </section>
             </div>
@@ -299,7 +155,8 @@ if (!$_SESSION['username']) {
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
+                                    class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -349,7 +206,7 @@ if (!$_SESSION['username']) {
 
 
     <script>
-        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

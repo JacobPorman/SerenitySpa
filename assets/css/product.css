@@ -117,3 +117,25 @@ li {
   font-weight: 400;
   text-align: center;
 }
+
+/* MEDIA PRODUCT */
+
+@media only screen and (max-width: 992px) {
+  .product-item {
+    display: inline-block;
+    width: 200px;
+    cursor: pointer;
+    padding: 0 15px 20px 15px;
+  }
+
+  .product-item img {
+    width: 100%;
+    transition: all 0.25s;
+  }
+
+  .product-item .text-3 {
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+  }
+}

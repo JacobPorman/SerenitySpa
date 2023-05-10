@@ -2,7 +2,7 @@
 require_once "./mvc/core/basehref.php";
 class authModel extends db
 {
-    private function _query($sql)
+    public function _query($sql)
     {
         return mysqli_query($this->connect, $sql);
     }
@@ -22,16 +22,19 @@ class authModel extends db
             return [];
         }
     }
-    public function authRegister($name, $password, $email, $phone)
+    public function authRegister($user_name, $user_password, $user_email, $user_phone)
     {
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        if (!($name && $password && $email && $phone)) return "<script>
+        $password = password_hash($user_password, PASSWORD_DEFAULT);
+        if (!($user_name && $password && $user_email && $user_phone)) return "<script>
             alert('Thông tin nhập thiếu. Mời nhập lại');
             location.href = '" . geturl() . "/login/registerView';
         </script>";
-        $typesql1 = "insert into member (	name, password,	email, phone)
-        values ('" . $name . "', '" . $password . "', '" . $email . "', '" . $phone . "');";
+
+        $typesql1 = "insert into users (name, password, email, phone)
+        values ('" . $user_name . "', '" . $password . "', '" . $user_email . "', '" . $user_phone . "');";
+
         if (!$this->_query($typesql1)) {
+            echo "fail";
             return "<script>
                 alert('Thông tin nhập thiếu. Mời nhập lại');
                 location.href = '" . geturl() . "/login/registerView';
