@@ -17,16 +17,17 @@ if (!$_SESSION['username']) {
 
     <title>Cart</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 
     <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
 
     <style>
-        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
-        include "./assets/css/style.css";
-        include "./assets/css/cart.css";
-        ?>
+    <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+    include "./assets/css/style.css";
+    include "./assets/css/cart.css";
+    ?>
     </style>
 
 </head>
@@ -36,7 +37,8 @@ if (!$_SESSION['username']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="home"><img src="./assets/image/logo/logo(500x300).png" alt="SpaLogo" /></a>
+                <a href="<?php echo getURL() . "/home" ?>"><img
+                        src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -68,18 +70,18 @@ if (!$_SESSION['username']) {
                 <!-- Links -->
                 <ul class="navbar-nav">
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="intro">Giới Thiệu</a>
+                        <a class="nav-link" href="<?php echo getURL() . "/intro" ?>">Giới Thiệu</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="product">Sản Phẩm
+                        <a class="nav-link" href="<?php echo getURL() . "/product" ?>">Sản Phẩm
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="info">Thông Tin</a>
+                        <a class="nav-link" href="<?php echo getURL() . "/info" ?>">Thông Tin</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="connect">Liên Hệ</a>
+                        <a class="nav-link" href="<?php echo getURL() . "/connect" ?>">Liên Hệ</a>
                     </li>
                 </ul>
             </nav>
@@ -104,10 +106,12 @@ if (!$_SESSION['username']) {
                         <hr>
 
                         <label for="input-id">Họ và tên: * </label>
-                        <input type="text" name="customer_fullname" id="customer_fullname" value class="form-control" required>
+                        <input type="text" name="customer_fullname" id="customer_fullname" value class="form-control"
+                            required>
 
                         <label for="input-id">Điện thoại: * </label>
-                        <input type="text" name="customer_phone" id="customer_phone" value class="form-control" required>
+                        <input type="text" name="customer_phone" id="customer_phone" value class="form-control"
+                            required>
 
                         <label for="input-id">Thành phố: * </label>
                         <select id="provinces" name="provinces" class="form-control" autocomplete="off">
@@ -178,7 +182,8 @@ if (!$_SESSION['username']) {
                         </select>
 
                         <label for="input-id">Địa chỉ: * </label>
-                        <textarea name="address" id="input" class="form-control" rows="3" required="required"></textarea>
+                        <textarea name="address" id="input" class="form-control" rows="3"
+                            required="required"></textarea>
                     </div>
 
                     <div class="payment">
@@ -202,7 +207,8 @@ if (!$_SESSION['username']) {
                                 <label for="momo">
                                     <div class="check" style="top: 24px;"></div>
                                     Ví MOMO
-                                    <img src="https://imagevietnam.vn/template/maihan/image/momo.png" style="height: 50px;margin-left: 10px;">
+                                    <img src="https://imagevietnam.vn/template/maihan/image/momo.png"
+                                        style="height: 50px;margin-left: 10px;">
                                 </label>
                             </li>
                             <li>
@@ -211,7 +217,8 @@ if (!$_SESSION['username']) {
                                 <label for="vnpayqr">
                                     <div class="check" style="top: 24px;"></div>
                                     <p class="t_1">VNPayQR</p>
-                                    <img src="https://imagevietnam.vn/template/maihan/image/CTT-VNPAY-QR.png" style="height: 40px;margin-left: 10px;">
+                                    <img src="https://imagevietnam.vn/template/maihan/image/CTT-VNPAY-QR.png"
+                                        style="height: 40px;margin-left: 10px;">
                                 </label>
                             </li>
                             </li>
@@ -221,7 +228,8 @@ if (!$_SESSION['username']) {
                                 <label for="vnbank">
                                     <div class="check" style="top: 24px;"></div>
                                     <p class="t_1">ATM nội địa</p>
-                                    <img src="https://imagevietnam.vn/template/maihan/image/vnpay_bank.svg" style="height: 40px;margin-left: 10px;">
+                                    <img src="https://imagevietnam.vn/template/maihan/image/vnpay_bank.svg"
+                                        style="height: 40px;margin-left: 10px;">
                                 </label>
                             </li>
                             </li>
@@ -232,7 +240,8 @@ if (!$_SESSION['username']) {
                                 <label for="intcard">
                                     <div class="check" style="top: 24px;"></div>
                                     <p class="t_1">VISA - MasterCard</p>
-                                    <img src="https://imagevietnam.vn/template/maihan/image/vnpay_intcard.svg" style="height: 40px;margin-left: 10px;">
+                                    <img src="https://imagevietnam.vn/template/maihan/image/vnpay_intcard.svg"
+                                        style="height: 40px;margin-left: 10px;">
                                 </label>
                             </li>
                             </li>
@@ -250,19 +259,24 @@ if (!$_SESSION['username']) {
                     <hr>
                     <div class="product_details">
                         <div class="product_img">
-                            <a href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
-                                <img src="https://imagevietnam.vn/images/files/Thi/clear-cell/clear-cell-blemish-gel.jpg" alt="" class="img-responsive" title="Gel chấm mụn Image Clear Cell Clarifying Salicylic Blemish Gel ">
+                            <a
+                                href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
+                                <img src="https://imagevietnam.vn/images/files/Thi/clear-cell/clear-cell-blemish-gel.jpg"
+                                    alt="" class="img-responsive"
+                                    title="Gel chấm mụn Image Clear Cell Clarifying Salicylic Blemish Gel ">
                             </a>
                             <div class="delete">
                                 <a href="https://imagevietnam.vn/gio-hang/delete/29027/">
-                                    <img src="https://imagevietnam.vn/template/maihan/image/xoa.png" alt="" class="img-responsive">
+                                    <img src="https://imagevietnam.vn/template/maihan/image/xoa.png" alt=""
+                                        class="img-responsive">
                                 </a>
                             </div>
                         </div>
 
                         <div class="product_detail">
 
-                            <a href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
+                            <a
+                                href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
                                 <p class="product_name">Gel chấm mụn Image Clear Cell Clarifying Salicylic Blemish Gel
                                 </p>
                             </a>
@@ -294,19 +308,24 @@ if (!$_SESSION['username']) {
 
                     <div class="product_details">
                         <div class="product_img">
-                            <a href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
-                                <img src="https://imagevietnam.vn/images/files/Thi/clear-cell/clear-cell-blemish-gel.jpg" alt="" class="img-responsive" title="Gel chấm mụn Image Clear Cell Clarifying Salicylic Blemish Gel ">
+                            <a
+                                href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
+                                <img src="https://imagevietnam.vn/images/files/Thi/clear-cell/clear-cell-blemish-gel.jpg"
+                                    alt="" class="img-responsive"
+                                    title="Gel chấm mụn Image Clear Cell Clarifying Salicylic Blemish Gel ">
                             </a>
                             <div class="delete">
                                 <a href="https://imagevietnam.vn/gio-hang/delete/29027/">
-                                    <img src="https://imagevietnam.vn/template/maihan/image/xoa.png" alt="" class="img-responsive">
+                                    <img src="https://imagevietnam.vn/template/maihan/image/xoa.png" alt=""
+                                        class="img-responsive">
                                 </a>
                             </div>
                         </div>
 
                         <div class="product_detail">
 
-                            <a href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
+                            <a
+                                href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
                                 <p class="product_name">Gel chấm mụn Image Clear Cell Clarifying Salicylic Blemish Gel
                                 </p>
                             </a>
@@ -365,7 +384,8 @@ if (!$_SESSION['username']) {
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
+                                    class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -413,7 +433,7 @@ if (!$_SESSION['username']) {
 
 
     <script>
-        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

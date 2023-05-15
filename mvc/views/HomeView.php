@@ -36,7 +36,8 @@ if (!$_SESSION['username']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="home"><img src="./assets/image/logo/logo(500x300).png" alt="SpaLogo" /></a>
+                <a href="<?php echo getURL() . "/home" ?>"><img
+                        src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -55,8 +56,8 @@ if (!$_SESSION['username']) {
                         <div class="message-user">
                             <?php if ($_SESSION['username']['user_role'] == 'admin') echo "<li><a href=" . getURL() . "/admin" . ">Admin</a>
                             </li>
-                            <li><a href=" . getURL() . "/login/logout" .">Logout</a></li>";
-                            else echo "<li><a href=" . getURL() . "/login/logout" .">Logout</a></li>"; ?>
+                            <li><a href=" . getURL() . "/login/logout" . ">Logout</a></li>";
+                            else echo "<li><a href=" . getURL() . "/login/logout" . ">Logout</a></li>"; ?>
                         </div>
                     </div>
                 </form>
@@ -68,18 +69,18 @@ if (!$_SESSION['username']) {
                 <!-- Links -->
                 <ul class="navbar-nav">
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="intro">Giới Thiệu</a>
+                        <a class="nav-link" href="<?php echo getURL() . "/intro" ?>">Giới Thiệu</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="product">Sản Phẩm
+                        <a class="nav-link" href="<?php echo getURL() . "/product" ?>">Sản Phẩm
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="info">Thông Tin</a>
+                        <a class="nav-link" href="<?php echo getURL() . "/info" ?>">Thông Tin</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="connect">Liên Hệ</a>
+                        <a class="nav-link" href="<?php echo getURL() . "/connect" ?>">Liên Hệ</a>
                     </li>
                 </ul>
             </nav>
@@ -285,8 +286,9 @@ if (!$_SESSION['username']) {
             </h1>
 
             <div class="item-collect">
+
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/ageless.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0px">
@@ -296,7 +298,7 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/body-spa.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0px">
@@ -306,7 +308,7 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/clear-cell.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0px">
@@ -316,7 +318,7 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/i-beauty.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0px">
@@ -326,7 +328,7 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/i-mask.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0px">
@@ -336,7 +338,7 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/iluma.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0px">
@@ -346,7 +348,7 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/md.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0px">
@@ -356,7 +358,7 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/ormedic.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0px">
@@ -366,7 +368,7 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/prevention.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0px">
@@ -376,7 +378,7 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/the-max.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0">
@@ -386,7 +388,7 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="item-img" style="position: relative">
-                    <a href="./product.html">
+                    <a href="<?php echo getURL() . "/product" ?>">
                         <img src="./assets/image/product/vital-c.jpg" alt="" />
                     </a>
                     <div class="item-text" style="position: absolute; top: 0px">
@@ -396,7 +398,7 @@ if (!$_SESSION['username']) {
                 </div>
             </div>
             <div class="btn-seeProductAll" style="text-align: center; margin-top: 100px">
-                <a href="./product.html"><input type="button" value="Xem tất cả sản phẩm"
+                <a href="<?php echo getURL() . "/product" ?>"><input type="button" value="Xem tất cả sản phẩm"
                         style="border: none; cursor: pointer; text-transform: uppercase" /></a>
             </div>
         </section>
@@ -414,42 +416,42 @@ if (!$_SESSION['username']) {
 
                 <div class="image-flwus">
                     <div class="item-img-flwus">
-                        <a href="./product.html">
+                        <a href="<?php echo getURL() . "/product" ?>">
                             <img src="./assets/image/product/flwus-1.jpg" alt="" />
                         </a>
                     </div>
                     <div class="item-img-flwus">
-                        <a href="./product.html">
+                        <a href="<?php echo getURL() . "/product" ?>">
                             <img src="./assets/image/product/flwus-2.jpg" alt="" />
                         </a>
                     </div>
                     <div class="item-img-flwus">
-                        <a href="./product.html">
+                        <a href="<?php echo getURL() . "/product" ?>">
                             <img src="./assets/image/product/flwus-3.jpg" alt="" />
                         </a>
                     </div>
                     <div class="item-img-flwus">
-                        <a href="./product.html">
+                        <a href="<?php echo getURL() . "/product" ?>">
                             <img src="./assets/image/product/flwus-4.jpg" alt="" />
                         </a>
                     </div>
                     <div class="item-img-flwus">
-                        <a href="./product.html">
+                        <a href="<?php echo getURL() . "/product" ?>">
                             <img src="./assets/image/product/flwus-5.jpg" alt="" />
                         </a>
                     </div>
                     <div class="item-img-flwus">
-                        <a href="./product.html">
+                        <a href="<?php echo getURL() . "/product" ?>">
                             <img src="./assets/image/product/flwus-6.jpg" alt="" />
                         </a>
                     </div>
                     <div class="item-img-flwus">
-                        <a href="./product.html">
+                        <a href="<?php echo getURL() . "/product" ?>">
                             <img src="./assets/image/product/flwus-7.jpg" alt="" />
                         </a>
                     </div>
                     <div class="item-img-flwus">
-                        <a href="./product.html">
+                        <a href="<?php echo getURL() . "/product" ?>">
                             <img src="./assets/image/product/flwus-8.jpg" alt="" />
                         </a>
                     </div>

@@ -23,9 +23,14 @@ class Product extends Controller
 
     function productdetail($product_id)
     {
-        $productDB = $this->model("ProductModel");
-        $product = mysqli_fetch_array($productDB->getProduct($product_id));
-        $related_product = $productDB->getRelatedProducts($product["cate_id"]);
-        $this->view("ProductDetail", ["pro" => $product, "related-pro" => $related_product]);
+        $productDB = $this->model("ProductsModel");
+
+
+        // $product = mysqli_fetch_array($productDB->getProduct($product_id));
+        // echo "<pre>";
+        // echo print_r($product);
+        // echo "</pre>";
+        // $related_product = $productDB->getRelatedProducts($product["cate_id"]);
+        $this->view("productDetailView", ["pro" => $productDB->getProduct($product_id)]);
     }
 }

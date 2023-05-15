@@ -1,0 +1,5 @@
+-   Chưa nối được giá tiền và title vào page productDetailView
+-   Chưa nối dữ liệu với admin page
+-   Chưa làm số lượng cho loại sản phẩm
+-   Chưa đẩy dữ liệu vào giỏ hàng
+-   Chưa đẩy dữ liệu đơn hàng lên adminView (nút xác nhận đơn hàng)
