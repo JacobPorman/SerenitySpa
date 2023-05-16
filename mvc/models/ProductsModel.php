@@ -24,9 +24,9 @@ class ProductsModel extends db
         return mysqli_query($this->connect, $qr);
     }
 
-    public function getRelatedProducts($category)
+    public function getRelatedProducts($id)
     {
-        $qr = "SELECT id, title, image, price FROM product WHERE cate_id='" . $category . "'";
+        $qr = "SELECT id, title, image, price FROM product WHERE id='" . $id . "'";
         return mysqli_query($this->connect, $qr);
     }
 
@@ -36,11 +36,6 @@ class ProductsModel extends db
         return mysqli_query($this->connect, $qr);
     }
 
-    public function getAllProductsWithPrice($p1, $p2)
-    {
-        $qr = "SELECT * FROM PRODUCTS WHERE product_price >=" . $p1 . " AND product_price <" . $p2 . "";
-        return mysqli_query($this->connect, $qr);
-    }
 
     public function searchProduct($value)
     {

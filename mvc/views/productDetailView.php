@@ -20,13 +20,13 @@ if (!$_SESSION['username']) {
 
 
     <style>
-    <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
 
-    include "./assets/css/style.css";
-    include "./assets/css/product.css";
-    include "./assets/css/cart.css";
-    include "./assets/css/productdetail.css";
-    ?>
+        include "./assets/css/style.css";
+        include "./assets/css/product.css";
+        include "./assets/css/cart.css";
+        include "./assets/css/productdetail.css";
+        ?>
     </style>
 
 </head>
@@ -36,8 +36,7 @@ if (!$_SESSION['username']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="<?php echo getURL() . "/home" ?>"><img
-                        src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
+                <a href="<?php echo getURL() . "/home" ?>"><img src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -119,13 +118,12 @@ if (!$_SESSION['username']) {
 
 
                 <div class="product-detail col-7">
-                    <h3 style="font-size: 20px; font-weight: bold">
-                        KEM TRỊ THÂM QUẦNG MẮT IMAGE VITAL C HYDRATING EYE RECOVERY GEL
-                    </h3>
-
                     <?php
-                    while ($row = mysqli_fetch_array($data["pro"])) {
-                        echo '<span class="product-price" style="font-size: 18px; color: rgb(228, 57, 57); font-weight: 600">' . $row["price"] . '</span>';
+                    while ($row = mysqli_fetch_array($data["related-pro"])) {
+                        echo '<h3 style="font-size: 20px; font-weight: bold; text-transform: uppercase">
+                        ' . $row["title"] . '
+                    </h3>
+                        <span class="product-price" style="font-size: 18px; color: rgb(228, 57, 57); font-weight: 600">' . $row["price"] . '</span>';
                     };
                     ?>
 
@@ -362,8 +360,7 @@ if (!$_SESSION['username']) {
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
-                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -414,7 +411,7 @@ if (!$_SESSION['username']) {
 
 
     <script>
-    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 
