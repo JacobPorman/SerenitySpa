@@ -40,51 +40,72 @@ ordersTab.addEventListener("click", () => {
 });
 
 // Lấy danh sách các button remove
-var removeButtons = document.querySelectorAll("#remove");
+// var removeButtons = document.querySelectorAll("#remove");
 
-// Duyệt qua từng button remove
-removeButtons.forEach(function (button) {
-  // Lắng nghe sự kiện click của button remove
-  button.addEventListener("click", function (event) {
-    // Ngăn chặn hành vi mặc định của button (chuyển trang)
-    event.preventDefault();
+// // Duyệt qua từng button remove
+// removeButtons.forEach(function (button) {
+//   // Lắng nghe sự kiện click của button remove
+//   button.addEventListener("click", function (event) {
+//     // Ngăn chặn hành vi mặc định của button (chuyển trang)
+//     // event.preventDefault();
 
-    // Lấy phần tử cha (tr) của button remove
-    var productRow = button.closest("tr");
+//     // Lấy phần tử cha (tr) của button remove
+//     var productRow = button.closest("tr");
 
-    // Xóa phần tử cha (tr) ra khỏi bảng (table)
-    productRow.remove();
-  });
-});
+//     // Xóa phần tử cha (tr) ra khỏi bảng (table)
+//     productRow.remove();
+//   });
+// });
 
 // Lấy thẻ button update và modal
 const updateBtn = document.querySelectorAll("#update-product");
 const modal = document.querySelector(".modal");
+const formModal = modal.querySelector("#formId");
 
 updateBtn.forEach(function (btn) {
   btn.addEventListener("click", () => {
+    formModal.setAttribute(
+      "action",
+      `http://localhost/Spa/admin/updateProduct/${btn.getAttribute(
+        "product-id"
+      )}`
+    );
     modal.style.display = "block";
   });
 });
 
 // Lấy các giá trị của input và cập nhật thông tin sản phẩm
-const form = modal.querySelector("form");
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+// const form = modal.querySelector("form");
+// form.addEventListener("submit", (event) => {
+//   // event.preventDefault();
 
-  // Lấy giá trị của các input
-  const name = document.getElementById("product-name").value;
-  const price = document.getElementById("product-price").value;
+//   // Lấy giá trị của các input
+//   const id = document.getElementById("product-id").value;
 
-  // Cập nhật thông tin sản phẩm trên trang web
-  const productName = document.getElementById("name-product");
-  const productPrice = document.getElementById("price-product");
-  productName.textContent = name;
-  productPrice.textContent = price;
+//   const name = document.getElementById("product-name").value;
+//   const price = document.getElementById("product-price").value;
 
-  // Ẩn modal
-  modal.style.display = "none";
-});
+//   // Cập nhật thông tin sản phẩm trên trang web
+//   const productId = document.getElementById("id-product");
+
+//   const productName = document.getElementById("name-product");
+//   const productPrice = document.getElementById("price-product");
+
+//   productId.textContent = id;
+//   productName.textContent = name;
+//   productPrice.textContent = price;
+
+//   var updateButton = document.querySelector("#update-btn");
+//   var form = document.getElementById("formId");
+//   updateButton.addEventListener("click", function () {
+//     var action = form.getAttribute("action");
+
+//     alert(action);
+//   });
+
+//   // Ẩn modal
+//   modal.style.display = "none";
+// });
 
 window.onclick = (event) => {
   if (event.target == modal) {

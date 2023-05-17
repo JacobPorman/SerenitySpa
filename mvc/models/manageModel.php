@@ -1,5 +1,5 @@
 <?php
-class manageModal extends db
+class manageModel extends db
 {
     private function _query($sql)
     {
@@ -12,16 +12,17 @@ class manageModal extends db
         $query1 = $this->_query($typesql);
         return $query1;
     }
-    public function editProductManage($id, $name, $price, $quantity, $rating)
+    public function editProductManage($id, $title, $image, $price)
     {
         if ($id != -1) {
             $typesql1 = "UPDATE product
-                        SET title='" . $name . "',price=" . $price . ", product_quantity=" . $quantity . ", product_image='" . $rating . "'
-                        WHERE product_id=" . $id . ";";
+                        SET title='" . $title . "',price='" . $price . "', image='" . $image . "'
+                        WHERE id=" . $id . ";";
+            echo $typesql1;
             $query1 = $this->_query($typesql1);
         } else {
-            $typesql1 = "insert into products (product_name, product_type, product_price, product_quantity, product_detail, product_brand, product_image)
-            values ('" . $name . "', '" . $price . "', '" . $quantity . "', '" . $rating . "');";
+            $typesql1 = "insert into product (title, price, image, cate_id)
+            values ('" . $title . "', '" . $price . "', '" . $image . "', 1);";
             $query1 = $this->_query($typesql1);
         }
         return $id;

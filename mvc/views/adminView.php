@@ -14,15 +14,16 @@ if (!$_SESSION['username']) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
 
     <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
 
     <style>
-        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
-        include "./assets/css/admin.css";
-        ?>
+    <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+    include "./assets/css/admin.css";
+    ?>
     </style>
 </head>
 
@@ -43,6 +44,7 @@ if (!$_SESSION['username']) {
                             <div class="nav-profile-text">
                                 <p>Nguyen Q Toan</p>
                             </div>
+
                         </div>
                     </li>
                     <li class="nav-item">
@@ -99,37 +101,32 @@ if (!$_SESSION['username']) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><img src="./img/tshirts/3.1.jpg" alt="" /></td>
+
+                                <!-- <td><img src="./img/tshirts/3.1.jpg" alt="" /></td>
                                     <td id="name-product">POPULAR</td>
-                                    <td id="price-product">310.000</td>
-                                    <td>
-                                        <button id="remove">
-                                            <i class="fa-sharp fa-solid fa-circle-xmark"></i>
-                                        </button>
+                                    <td id="price-product">310.000</td> -->
+                                <?php
+                                while ($row = mysqli_fetch_array($data["all-pro"])) {
+                                    echo '
+                                    <tr product-id="' . $row['id'] . '">
+                                        <td id="id-product">' . $row["id"] . '</td>
+                                        <td id="name-product">' . $row["title"] . '</td>
+                                        <td id="price-product">' . $row["price"] . '</td>
+                                        <td>
+                                        <a id="remove" href="http://localhost/Spa/admin/deleteProduct/' . $row['id'] . '"><button >
+                                        <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+                                    </button></a>
                                     </td>
                                     <td>
-                                        <button id="update-product">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </button>
+                                        <a product-id="' . $row['id'] . '"id="update-product"><button >
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button></a>
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td><img src="./img/tshirts/3.1.jpg" alt="" /></td>
-                                    <td id="name">POPULAR</td>
-                                    <td id="price">310.000</td>
-                                    <td>
-                                        <button id="remove">
-                                            <i class="fa-sharp fa-solid fa-circle-xmark"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button id="update-product">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+                                ';
+                                };
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -149,14 +146,17 @@ if (!$_SESSION['username']) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><img src="./img/tshirts/3.1.jpg" alt="" /></td>
-                                    <td id="name-customer">Nguyễn Quốc Toàn</td>
-                                    <td id="gmail">ngquoctoan2001@gmail.com</td>
+                                <?php
+                                while ($row = mysqli_fetch_array($data["all-user"])) {
+                                    echo '
+                                    <tr>
+                                    <td id="id-customer">' . $row['id'] . '</td>
+                                    <td id="name-customer">' . $row['name'] . '</td>
+                                    <td id="gmail">' . $row['email'] . '</td>
                                     <td>
-                                        <button id="remove">
-                                            <i class="fa-sharp fa-solid fa-circle-xmark"></i>
-                                        </button>
+                                        <a id="remove" href="http://localhost/Spa/admin/deleteUser/' . $row['id'] . '"><button >
+                                        <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+                                    </button></a>
                                     </td>
                                     <td>
                                         <button id="update-customer">
@@ -164,22 +164,11 @@ if (!$_SESSION['username']) {
                                         </button>
                                     </td>
                                 </tr>
+                                ';
+                                };
+                                ?>
 
-                                <tr>
-                                    <td><img src="./img/tshirts/3.1.jpg" alt="" /></td>
-                                    <td id="name-customer">Toàn Quốc Nguyễn</td>
-                                    <td id="gmail">asdasdasd@gmail.com</td>
-                                    <td>
-                                        <button id="remove">
-                                            <i class="fa-sharp fa-solid fa-circle-xmark"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button id="update-customer">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -231,24 +220,27 @@ if (!$_SESSION['username']) {
                     <div class="modal">
                         <div class="modal-content">
                             <h2>Chỉnh sửa sản phẩm</h2>
-                            <form>
+                            <form id="formId" method="post" action="">
+
                                 <div>
                                     <label for="product-name">Tên sản phẩm:</label>
-                                    <input type="text" id="product-name" name="product-name" required />
+                                    <input type="text" id="product-name" name="product-name" />
                                 </div>
                                 <div>
                                     <label for="product-price">Giá:</label>
-                                    <input type="text" id="product-price" name="product-price" required />
+                                    <input type="text" id="product-price" name="product-price" />
                                 </div>
 
                                 <div>
                                     <label for="product-images">Hình ảnh:</label>
-                                    <input type="file" id="product-images" name="product-images" accept="image/*" multiple />
+                                    <input type="file" id="product-images" name="product-images" accept="image/*"
+                                        multiple />
                                 </div>
 
                                 <div class="button">
-                                    <button type="submit">Cập nhật</button>
+                                    <button id="update-btn" type="submit">Cập nhật</button>
                                 </div>
+
                             </form>
                         </div>
                     </div>
@@ -259,7 +251,7 @@ if (!$_SESSION['username']) {
 
 
     <script>
-        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 
