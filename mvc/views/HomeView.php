@@ -24,10 +24,10 @@ if (!$_SESSION['username']) {
     <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
 
     <style>
-        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
-        include "./assets/css/style.css";
-        include "./assets/css/index.css";
-        ?>
+    <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+    include "./assets/css/style.css";
+    include "./assets/css/index.css";
+    ?>
     </style>
 </head>
 
@@ -36,7 +36,8 @@ if (!$_SESSION['username']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="<?php echo getURL() . "/home" ?>"><img src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
+                <a href="<?php echo getURL() . "/home" ?>"><img
+                        src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -53,7 +54,7 @@ if (!$_SESSION['username']) {
                             </a>
                         </div>
                         <div class="message-user">
-                            <?php if ($_SESSION['username']['user_role'] == 'admin') echo "<li><a href=" . getURL() . "/admin" . ">Admin</a>
+                            <?php if ($_SESSION['user']['user_role'] == 'admin') echo "<li><a href=" . getURL() . "/admin" . ">Admin</a>
                             </li>
                             <li><a href=" . getURL() . "/login/logout" . ">Logout</a></li>";
                             else echo "<li>Hello User
@@ -128,7 +129,8 @@ if (!$_SESSION['username']) {
                             <div class="col-sm-3">
                                 <div class="thumb-wrapper">
                                     <div class="img-box">
-                                        <img src="./assets/image/trang-chu/bestproduct_1.png" class="img-fluid" alt="" />
+                                        <img src="./assets/image/trang-chu/bestproduct_1.png" class="img-fluid"
+                                            alt="" />
                                     </div>
                                     <div class="thumb-content">
                                         <h6>Bộ đôi trị nám, trắng da ILUMA x MD</h6>
@@ -161,7 +163,8 @@ if (!$_SESSION['username']) {
                             <div class="col-sm-3">
                                 <div class="thumb-wrapper">
                                     <div class="img-box">
-                                        <img src="./assets/image/trang-chu/bestproduct_2.png" class="img-fluid" alt="" />
+                                        <img src="./assets/image/trang-chu/bestproduct_2.png" class="img-fluid"
+                                            alt="" />
                                     </div>
                                     <div class="thumb-content">
                                         <h6>Serum trị nám trắng da Intense Facial</h6>
@@ -194,7 +197,8 @@ if (!$_SESSION['username']) {
                             <div class="col-sm-3">
                                 <div class="thumb-wrapper">
                                     <div class="img-box">
-                                        <img src="./assets/image/trang-chu/bestproduct_3.png" class="img-fluid" alt="" />
+                                        <img src="./assets/image/trang-chu/bestproduct_3.png" class="img-fluid"
+                                            alt="" />
                                     </div>
                                     <div class="thumb-content">
                                         <h6>Tinh chất làm sáng, giảm nếp nhăn MD</h6>
@@ -227,7 +231,8 @@ if (!$_SESSION['username']) {
                             <div class="col-sm-3">
                                 <div class="thumb-wrapper">
                                     <div class="img-box">
-                                        <img src="./assets/image/trang-chu/bestproduct_4.png" class="img-fluid" alt="" />
+                                        <img src="./assets/image/trang-chu/bestproduct_4.png" class="img-fluid"
+                                            alt="" />
                                     </div>
                                     <div class="thumb-content">
                                         <h6>Serum cấp nước - khóa ẩm Vital C</h6>
@@ -394,7 +399,8 @@ if (!$_SESSION['username']) {
                 </div>
             </div>
             <div class="btn-seeProductAll" style="text-align: center; margin-top: 100px">
-                <a href="<?php echo getURL() . "/product" ?>"><input type="button" value="Xem tất cả sản phẩm" style="border: none; cursor: pointer; text-transform: uppercase" /></a>
+                <a href="<?php echo getURL() . "/product" ?>"><input type="button" value="Xem tất cả sản phẩm"
+                        style="border: none; cursor: pointer; text-transform: uppercase" /></a>
             </div>
         </section>
 
@@ -466,7 +472,8 @@ if (!$_SESSION['username']) {
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
+                                    class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -517,7 +524,7 @@ if (!$_SESSION['username']) {
 
 
     <script>
-        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

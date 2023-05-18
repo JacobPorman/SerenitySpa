@@ -4,7 +4,7 @@ class Admin extends Controller
     function defaultView()
     {
 
-        if ($_SESSION['username']['user_role'] == 'admin') {
+        if ($_SESSION['user']['user_role'] == 'admin') {
             $productDB = $this->model("ProductsModel");
 
             $this->view("adminView", [

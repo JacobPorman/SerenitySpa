@@ -4,8 +4,14 @@ class Login extends Controller
 {
     public function defaultView()
     {
-        $this->view("loginView");
+
+        if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+            header("Location: " . geturl() . "/home");
+        } else {
+            $this->view("loginView");
+        }
     }
+
     public function auth()
     {
         $email = $_POST['email'];
@@ -18,7 +24,7 @@ class Login extends Controller
             location.href = '" . geturl() . "/login/loginView';
         </script>";
         } else {
-            $_SESSION['username'] = $demoData[0];
+            $_SESSION['user'] = $demoData[0];
             header("Location: " . geturl() . "/home");
         }
     }
@@ -41,7 +47,7 @@ class Login extends Controller
     }
     public function logout()
     {
-        unset($_SESSION['username']);
+        unset($_SESSION['user']);
         header("Location: " . geturl() . "/login/loginView");
     }
 }
