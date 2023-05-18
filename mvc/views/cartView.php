@@ -1,6 +1,6 @@
 <?php
 require_once "./mvc/core/basehref.php";
-if (!$_SESSION['username']) {
+if (!$_SESSION['user']) {
     header("Location: " . geturl() . "/login/loginView");
 }
 
@@ -258,16 +258,17 @@ if (!$_SESSION['username']) {
                     </h4>
                     <hr class="hr1">
                     <hr>
-                    <div class="product_details">
+                    <?php foreach ($_SESSION["cart"] as $key => $value) {
+                        echo '<div class="product_details">
                         <div class="product_img">
                             <a
                                 href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
-                                <img src="https://imagevietnam.vn/images/files/Thi/clear-cell/clear-cell-blemish-gel.jpg"
+                                <img src="' . $value['image'] . '"
                                     alt="" class="img-responsive"
-                                    title="Gel chấm mụn Image Clear Cell Clarifying Salicylic Blemish Gel ">
+                                    title="' . $value['title'] . '">
                             </a>
                             <div class="delete">
-                                <a href="https://imagevietnam.vn/gio-hang/delete/29027/">
+                                <a href="http://localhost/Spa/cart/deleteProductToCart/' . $value['id'] . '">
                                     <img src="https://imagevietnam.vn/template/maihan/image/xoa.png" alt=""
                                         class="img-responsive">
                                 </a>
@@ -278,12 +279,12 @@ if (!$_SESSION['username']) {
 
                             <a
                                 href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
-                                <p class="product_name">Gel chấm mụn Image Clear Cell Clarifying Salicylic Blemish Gel
+                                <p class="product_name">' . $value['title'] . '
                                 </p>
                             </a>
 
                             <p class="product_price">
-                                <b>751.500</b>
+                                <b>' . $value['price'] . '</b>
                             </p>
 
                             <div class="product_quantity">
@@ -294,7 +295,7 @@ if (!$_SESSION['username']) {
                                     </button>
                                 </span>
 
-                                <input type="text" value="1" class="quantity">
+                                <input product-id="' . $value['id'] . '" type="text" value="' . $value['quantity'] . '" class="quantity">
 
                                 <span class="change_quantity-btn">
                                     <button onclick="changeQuantity(this, 1)">
@@ -305,54 +306,11 @@ if (!$_SESSION['username']) {
                         </div>
 
                         <hr>
-                    </div>
+                    </div>';
+                    }
+                    ?>
 
-                    <div class="product_details">
-                        <div class="product_img">
-                            <a
-                                href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
-                                <img src="https://imagevietnam.vn/images/files/Thi/clear-cell/clear-cell-blemish-gel.jpg"
-                                    alt="" class="img-responsive"
-                                    title="Gel chấm mụn Image Clear Cell Clarifying Salicylic Blemish Gel ">
-                            </a>
-                            <div class="delete">
-                                <a href="https://imagevietnam.vn/gio-hang/delete/29027/">
-                                    <img src="https://imagevietnam.vn/template/maihan/image/xoa.png" alt=""
-                                        class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="product_detail">
-
-                            <a
-                                href="https://imagevietnam.vn/san-pham/gel-cham-mun-image-clear-cell-clarifying-salicylic-blemish-gel.html">
-                                <p class="product_name">Gel chấm mụn Image Clear Cell Clarifying Salicylic Blemish Gel
-                                </p>
-                            </a>
-
-                            <p class="product_price">
-                                <b>751.500</b>
-                            </p>
-
-                            <div class="product_quantity">
-                                <span class="change_quantity-btn">
-                                    <button onclick="changeQuantity(this, -1)">
-                                        <i class="fa fa-minus"></i>
-                                    </button>
-                                </span>
-
-                                <input type="text" value="1" class="quantity">
-
-                                <span class="change_quantity-btn">
-                                    <button onclick="changeQuantity(this, 1)">
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
 
                     <div class="total_price">
                         <div class="total1">
@@ -366,9 +324,9 @@ if (!$_SESSION['username']) {
                 </div>
 
                 <div class="order_confirm">
-                    <button type="submit" value="">
-                        <b>Xác nhận đơn hàng</b>
-                    </button>
+                    <a href='<?php echo getURL() . '/cart/payCart' ?>'><button type="submit" value="">
+                            <b>Xác nhận đơn hàng</b>
+                        </button></a>
                 </div>
             </div>
 

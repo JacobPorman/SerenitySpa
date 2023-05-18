@@ -1,6 +1,6 @@
 <?php
 require_once "./mvc/core/basehref.php";
-if (!$_SESSION['username']) {
+if (!$_SESSION['user']) {
     header("Location: " . geturl() . "/login/loginView");
 }
 ?>

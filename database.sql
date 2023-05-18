@@ -99,7 +99,7 @@ insert into product (`id`, `title`, `image`, `price`, `cate_id`) values (20, 'Ke
 
 create table `orders` (
 	id int auto_increment,
-    create_date date not null,
+    create_date date ,
     user_id int default null,
     primary key(id),
     constraint fk_user_id foreign key(user_id) references users (id)

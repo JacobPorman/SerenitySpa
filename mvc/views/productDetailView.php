@@ -1,8 +1,14 @@
 <?php
 require_once "./mvc/core/basehref.php";
-if (!$_SESSION['username']) {
+if (!$_SESSION['user']) {
     header("Location: " . geturl() . "/login/loginView");
 }
+
+$row;
+while ($product = (mysqli_fetch_array($data["pro"]))) {
+    $row = $product;
+}
+
 ?>
 
 
@@ -16,18 +22,19 @@ if (!$_SESSION['username']) {
     <title>Chi tiết sản phẩm</title>
 
 
-    <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="http://localhost/Spa/assets/libs/font-awesome/css/all.min.css">
 
 
     <style>
         <?php include "./assets/libs/bootstrap/bootstrap.min.css";
-
         include "./assets/css/style.css";
         include "./assets/css/product.css";
         include "./assets/css/cart.css";
         include "./assets/css/productdetail.css";
         ?>
     </style>
+
+
 
 </head>
 
@@ -48,7 +55,7 @@ if (!$_SESSION['username']) {
                             </a>
                         </div>
                         <div class="shopping-cart">
-                            <a href="cart" class="shopping_icon">
+                            <a href="<?php echo getURL() . "/cart" ?>" class="shopping_icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </a>
                         </div>
@@ -89,6 +96,7 @@ if (!$_SESSION['username']) {
 
 
     <!-- MAIN -->
+
     <main>
         <div class="container product-detail-view">
             <div class="nav-product">
@@ -110,22 +118,18 @@ if (!$_SESSION['username']) {
 
             <div class="row">
                 <?php
-                while ($row = mysqli_fetch_array($data["pro"])) {
-                    echo '<div class="product-image col-5">
+                echo '<div class="product-image col-5">
                         <img src="' . $row["image"] . '" alt="" />
                     </div>';
-                };
                 ?>
 
 
                 <div class="product-detail col-7">
                     <?php
-                    while ($row = mysqli_fetch_array($data["related-pro"])) {
-                        echo '<h3 style="font-size: 20px; font-weight: bold; text-transform: uppercase">
+                    echo '<h3 style="font-size: 20px; font-weight: bold; text-transform: uppercase">
                         ' . $row["title"] . '
                     </h3>
                         <span class="product-price" style="font-size: 18px; color: rgb(228, 57, 57); font-weight: 600">' . $row["price"] . '</span>';
-                    };
                     ?>
 
 
@@ -147,21 +151,20 @@ if (!$_SESSION['username']) {
 
                             <span class="change_quantity-btn">
                                 <button onclick="changeQuantity(this, 1)">
-                                    <i class="fa fa-plus"></i>
+                                    <i class="fa mysqli_fetch_arrayfa-plus"></i>
                                 </button>
                             </span>
                         </div>
 
-                        <!-- <div class="add-to-cart">
-                            <input type="button" value="Thêm vào giỏ hàng" class="btn" />
-                        </div> -->
+
                         <?php
-                        while ($row = mysqli_fetch_array($data["all-pro"])) {
-                            echo '<a href="' . getURL() . '/cart/productRelate' . $row['id'] . '><div class="add-to-cart">
-                        <input type="button" value="Thêm vào giỏ hàng" class="btn" />
-                    </div></a>';
-                        };
+
+
+                        echo '<div class="add-to-cart">
+                    <input product-id="' . $row["id"] . '" type="button" value="Thêm vào giỏ hàng" class="btn" />
+                </div>';
                         ?>
+
                     </div>
 
                     <div class="classify" style="font-size: 14px">
