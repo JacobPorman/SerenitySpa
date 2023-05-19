@@ -17,13 +17,14 @@ if (!$_SESSION['user']) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sản phẩm</title>
 
-    <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="http://localhost/Spa/assets/libs/font-awesome/css/all.min.css">
+
 
     <style>
-    <?php include "./assets/libs/bootstrap/bootstrap.min.css";
-    include "./assets/css/style.css";
-    include "./assets/css/product.css";
-    ?>
+        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+        include "./assets/css/style.css";
+        include "./assets/css/product.css";
+        ?>
     </style>
 </head>
 
@@ -32,8 +33,7 @@ if (!$_SESSION['user']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="<?php echo getURL() . "/home" ?>"><img
-                        src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
+                <a href="<?php echo getURL() . "/home" ?>"><img src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -156,8 +156,7 @@ if (!$_SESSION['user']) {
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
-                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -207,7 +206,7 @@ if (!$_SESSION['user']) {
 
 
     <script>
-    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

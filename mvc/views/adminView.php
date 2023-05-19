@@ -21,7 +21,8 @@ if (!$_SESSION['user']) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
 
-    <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="http://localhost/Spa/assets/libs/font-awesome/css/all.min.css">
+
 
     <style>
         <?php include "./assets/libs/bootstrap/bootstrap.min.css";
@@ -227,11 +228,11 @@ if (!$_SESSION['user']) {
 
                                 <div>
                                     <label for="product-name">Tên sản phẩm:</label>
-                                    <input type="text" id="product-name" name="product-name" />
+                                    <input type="text" id="product-name" name="product-name" required />
                                 </div>
                                 <div>
                                     <label for="product-price">Giá:</label>
-                                    <input type="text" id="product-price" name="product-price" />
+                                    <input type="text" id="product-price" name="product-price" required />
                                 </div>
 
                                 <div>

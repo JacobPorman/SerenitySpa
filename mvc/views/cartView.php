@@ -21,7 +21,8 @@ if (!$_SESSION['user']) {
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 
-    <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="http://localhost/Spa/assets/libs/font-awesome/css/all.min.css">
+
 
     <style>
     <?php include "./assets/libs/bootstrap/bootstrap.min.css";

@@ -21,7 +21,8 @@ if (!$_SESSION['user']) {
 
     <!-- Fontawesome CSS -->
 
-    <link rel="stylesheet" href="./assets/libs/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="http://localhost/Spa/assets/libs/font-awesome/css/all.min.css">
+
 
     <style>
         <?php include "./assets/libs/bootstrap/bootstrap.min.css";
