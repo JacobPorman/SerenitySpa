@@ -259,7 +259,7 @@ if (!$_SESSION['user']) {
                                     title="' . $value['title'] . '">
                             </a>
                             <div class="delete">
-                                <a href="http://localhost/Spa/cart/deleteProductToCart/' . $value['id'] . '">
+                                <a href="http://localhost/SerenitySpa/cart/deleteProductToCart/' . $value['id'] . '">
                                     <img src="https://imagevietnam.vn/template/maihan/image/xoa.png" alt=""
                                         class="img-responsive">
                                 </a>

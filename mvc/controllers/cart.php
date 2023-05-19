@@ -37,14 +37,14 @@ class Cart extends Controller
             $_SESSION['cart'][$id] = $product;
         }
 
-        header("Location: http://localhost/Spa/");
+        header("Location: http://localhost/SerenitySpa/");
     }
     function deleteProductToCart($id)
     {
         unset($_SESSION['cart'][$id]);
 
 
-        header("Location: http://localhost/Spa/cart");
+        header("Location: http://localhost/SerenitySpa/cart");
     }
 
     function changeAmoutProductToCart()
@@ -65,6 +65,6 @@ class Cart extends Controller
         $id = $orderDB->addOrder();
 
         $orderDB->addOrderDetail($id);
-        header("Location: http://localhost/Spa/cart");
+        header("Location: http://localhost/SerenitySpa/cart");
     }
 }
