@@ -3,7 +3,6 @@ require_once "./mvc/core/basehref.php";
 if (!$_SESSION['user']) {
     header("Location: " . geturl() . "/login/loginView");
 }
-
 ?>
 
 <!DOCTYPE html>

@@ -5,7 +5,7 @@ class db
     public $connect;
     protected $servername = "localhost:3306";
     protected $username = "root";
-    protected $password = "123456";
+    protected $password = "Admin@123";
     protected $dbname = "spa_database";
 
     function __construct()

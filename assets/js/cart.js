@@ -24,12 +24,12 @@ addtocart.addEventListener("click", (e) => {
   formData.append("id", id);
   formData.append("quantity", document.querySelector(".quantity").value);
 
-  fetch("http://localhost/Spa/cart/addProductToCart", {
+  fetch("http://localhost/SerenitySpa/cart/addProductToCart", {
     method: "POST",
     body: formData,
   });
 
-  window.location = "http://localhost/Spa/cart";
+  window.location = "http://localhost/SerenitySpa/cart";
 });
 
 function deleteProduct() {
