@@ -7,7 +7,7 @@ function changeQuantity(btn, value) {
     var formData = new FormData();
     formData.append("id", inputEl.getAttribute("product-id"));
     formData.append("quantity", value);
-    fetch("http://localhost/Spa/cart/changeAmoutProductToCart", {
+    fetch("http://localhost/SerenitySpa/cart/changeAmoutProductToCart", {
       method: "POST",
       body: formData,
     });

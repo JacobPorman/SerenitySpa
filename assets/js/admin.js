@@ -66,7 +66,7 @@ updateBtn.forEach(function (btn) {
   btn.addEventListener("click", () => {
     formModal.setAttribute(
       "action",
-      `http://localhost/Spa/admin/updateProduct/${btn.getAttribute(
+      `http://localhost/SerenitySpa/admin/updateProduct/${btn.getAttribute(
         "product-id"
       )}`
     );
