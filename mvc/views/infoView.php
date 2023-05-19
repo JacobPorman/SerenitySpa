@@ -22,11 +22,11 @@ if (!$_SESSION['user']) {
 
 
     <style>
-        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
-        include "./assets/css/style.css";
-        include "./assets/css/info.css";
-        include "./assets/css/index.css";
-        ?>
+    <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+    include "./assets/css/style.css";
+    include "./assets/css/info.css";
+    include "./assets/css/index.css";
+    ?>
     </style>
 </head>
 
@@ -35,7 +35,8 @@ if (!$_SESSION['user']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="<?php echo getURL() . "/home" ?>"><img src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
+                <a href="<?php echo getURL() . "/home" ?>"><img
+                        src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -87,7 +88,7 @@ if (!$_SESSION['user']) {
     </header>
 
     <!-- MAIN -->
-    <main id="homepage">
+    <main id="homepage" style='margin-top: 30px;margin-bottom: 30px;'>
         <section class="banner">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -270,7 +271,8 @@ if (!$_SESSION['user']) {
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
+                                    class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -321,7 +323,7 @@ if (!$_SESSION['user']) {
     <script type="module" src="./js/module.js"></script>
 
     <script>
-        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 

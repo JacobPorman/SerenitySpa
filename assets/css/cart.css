@@ -264,6 +264,10 @@ input[type="radio"]:checked ~ label .check {
   justify-content: flex-end;
 }
 
+.order_confirm a {
+  text-decoration: none;
+}
+
 .order_confirm button {
   font-size: 16px;
   width: 40%;

@@ -17,18 +17,17 @@ if (!$_SESSION['user']) {
 
     <title>Cart</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 
     <link rel="stylesheet" href="http://localhost/Spa/assets/libs/font-awesome/css/all.min.css">
 
 
     <style>
-    <?php include "./assets/libs/bootstrap/bootstrap.min.css";
-    include "./assets/css/style.css";
-    include "./assets/css/cart.css";
-    ?>
+        <?php include "./assets/libs/bootstrap/bootstrap.min.css";
+        include "./assets/css/style.css";
+        include "./assets/css/cart.css";
+        ?>
     </style>
 
 </head>
@@ -38,8 +37,7 @@ if (!$_SESSION['user']) {
     <header class="sticky-top" id="header">
         <div class="container-fluid m-0 p-0">
             <div class="logo text-center p-0 m-0">
-                <a href="<?php echo getURL() . "/home" ?>"><img
-                        src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
+                <a href="<?php echo getURL() . "/home" ?>"><img src="<?php echo getURL() . "/assets/image/logo/logo(500x300).png" ?>" alt="SpaLogo" /></a>
             </div>
             <div class="icon">
                 <form action="" method="get" id="form-search">
@@ -108,12 +106,10 @@ if (!$_SESSION['user']) {
                         <hr>
 
                         <label for="input-id">Họ và tên: * </label>
-                        <input type="text" name="customer_fullname" id="customer_fullname" value class="form-control"
-                            required>
+                        <input type="text" name="customer_fullname" id="customer_fullname" value class="form-control" required>
 
                         <label for="input-id">Điện thoại: * </label>
-                        <input type="text" name="customer_phone" id="customer_phone" value class="form-control"
-                            required>
+                        <input type="text" name="customer_phone" id="customer_phone" value class="form-control" required>
 
                         <label for="input-id">Thành phố: * </label>
                         <select id="provinces" name="provinces" class="form-control" autocomplete="off">
@@ -184,8 +180,7 @@ if (!$_SESSION['user']) {
                         </select>
 
                         <label for="input-id">Địa chỉ: * </label>
-                        <textarea name="address" id="input" class="form-control" rows="3"
-                            required="required"></textarea>
+                        <textarea name="address" id="input" class="form-control" rows="3" required="required"></textarea>
                     </div>
 
                     <div class="payment">
@@ -209,8 +204,7 @@ if (!$_SESSION['user']) {
                                 <label for="momo">
                                     <div class="check" style="top: 24px;"></div>
                                     Ví MOMO
-                                    <img src="https://imagevietnam.vn/template/maihan/image/momo.png"
-                                        style="height: 50px;margin-left: 10px;">
+                                    <img src="https://imagevietnam.vn/template/maihan/image/momo.png" style="height: 50px;margin-left: 10px;">
                                 </label>
                             </li>
                             <li>
@@ -219,8 +213,7 @@ if (!$_SESSION['user']) {
                                 <label for="vnpayqr">
                                     <div class="check" style="top: 24px;"></div>
                                     <p class="t_1">VNPayQR</p>
-                                    <img src="https://imagevietnam.vn/template/maihan/image/CTT-VNPAY-QR.png"
-                                        style="height: 40px;margin-left: 10px;">
+                                    <img src="https://imagevietnam.vn/template/maihan/image/CTT-VNPAY-QR.png" style="height: 40px;margin-left: 10px;">
                                 </label>
                             </li>
                             </li>
@@ -230,8 +223,7 @@ if (!$_SESSION['user']) {
                                 <label for="vnbank">
                                     <div class="check" style="top: 24px;"></div>
                                     <p class="t_1">ATM nội địa</p>
-                                    <img src="https://imagevietnam.vn/template/maihan/image/vnpay_bank.svg"
-                                        style="height: 40px;margin-left: 10px;">
+                                    <img src="https://imagevietnam.vn/template/maihan/image/vnpay_bank.svg" style="height: 40px;margin-left: 10px;">
                                 </label>
                             </li>
                             </li>
@@ -242,8 +234,7 @@ if (!$_SESSION['user']) {
                                 <label for="intcard">
                                     <div class="check" style="top: 24px;"></div>
                                     <p class="t_1">VISA - MasterCard</p>
-                                    <img src="https://imagevietnam.vn/template/maihan/image/vnpay_intcard.svg"
-                                        style="height: 40px;margin-left: 10px;">
+                                    <img src="https://imagevietnam.vn/template/maihan/image/vnpay_intcard.svg" style="height: 40px;margin-left: 10px;">
                                 </label>
                             </li>
                             </li>
@@ -259,7 +250,7 @@ if (!$_SESSION['user']) {
                     </h4>
                     <hr class="hr1">
                     <hr>
-                    <?php foreach ($_SESSION["cart"] as $key => $value) {
+                    <?php foreach ($_SESSION['cart'] as $key => $value) {
                         echo '<div class="product_details">
                         <div class="product_img">
                             <a
@@ -344,8 +335,7 @@ if (!$_SESSION['user']) {
                             <a href="https://www.facebook.com/hungnguyen130"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i
-                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/khianhyeu_trieutraitimtanvo_/"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div>
                             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -393,7 +383,7 @@ if (!$_SESSION['user']) {
 
 
     <script>
-    <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
+        <?php include "./assets/libs/bootstrap/bootstrap-jQ.min.js";
         include "./assets/libs/bootstrap/popper.min.js";
         include "./assets/libs/bootstrap/bootstrap.min.js";
 
